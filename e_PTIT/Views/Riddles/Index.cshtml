@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Հանելուկներ";
+    Layout = "~/Views/Shared/_RiddlesLayoutPagPP.cshtml";
+}
+<div class="container" style="background-color:#f9f7f4;color:#f75e74;border-left:1px solid #808080;border-right:1px solid #808080;">
+    <div style="margin-top:50px !important;width:100%;" class="text-center">
+        &nbsp;
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="~/Media/riddles/r1.jpg" />
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-2"><button onclick="toggleTargetControl('answer3');" id="getAnswer" class="btn btn-info">պատասխան </button></div>
+        <div class="col-md-8 answer3 text-left" id="answer3" style="display:none;"> 
+                    <ul class="list-group" style="font-weight:500;">
+                        <li class="list-group-item">1- ծխնելոյզ</li>
+                        <li class="list-group-item">2- հովանոց</li>
+                        <li class="list-group-item">3- ցոլացում</li>
+                        <li class="list-group-item">4- ժամացոյց</li>
+                        <li class="list-group-item">5- «ա»  տառը</li>
+                    </ul> 
+        </div>
+    </div>
+    <br />
+    <br />
+</div>
+<script>
+    function toggleTargetControl(targetName) {
+        $("." + targetName).toggle();
+    }
+
+</script>

@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Պատմութիւններ";
+    Layout = "~/Views/Shared/_StoriesLayoutPagePP.cshtml";
+}
+<div class="container" style="background-color:#f9f7f4;color:#000;border-left:1px solid #808080;border-right:1px solid #808080;">
+    <div style="margin-top:10px !important;width:100%;" class="text-center">
+        <div class="text-center">
+
+            <img src="~/images/storiesHeader.png" />
+        </div>
+        <div class="text-center">
+            <img src="~/images/StoriesTitle.png" />
+        </div>
+    </div>
+    <br />
+    <br />
+    <script>
+    function toggleTargetControl(targetName) {
+        $("." + targetName).toggle();
+    }
+
+    </script>
+    <div class="row">
+        <div class="col-md-2"><button onclick="toggleTargetControl('answer3');" id="getAnswer" class="btn btn-danger" style="border:0px;">* Բառարան </button></div>
+        <div class="col-md-8 answer3 text-left" id="answer3" style="display:none;">
+            <ul class="list-group" style="font-weight:500;">
+                <li class="list-group-item">ԸՄՊԵԼԻՔ - խմելիք</li>
+                <li class="list-group-item">Ի ԴԵՐԵՒ - ի զուր, պարապ տեղ</li>
+                <li class="list-group-item">ԽՈՒՍԱՓԻԼ- խոյս տալ, զգուշանալ</li>
+                <li class="list-group-item">ԿԻԶԻՉ - այրող</li>
+                <li class="list-group-item">ԿՈՒՇՏՈՒԿՈՒՌ - լման կշտացած</li>
+                <li class="list-group-item">ՀԵՇՏ - դիւրին</li>
+                <li class="list-group-item">ՀՆԱՐԱՄԻՏ - հնարող խելք ունեցող</li>
+                <li class="list-group-item">ՍԱՏԱՐԵԼ- օգնել, օժանդակել</li>
+                <li class="list-group-item">ՍՆՆԴԱՌՈՒԹԻՒՆ - սնունդ առնելը</li>
+                <li class="list-group-item">ՓԱՓԿԱՆԿԱՏ - նրբանկատ, նուրբ վարմունք ունեցող</li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="media-list">
+                <li><br /></li>
+                <li class="media">
+                    <div class="pull-left">
+                        <a href="/Stories/StoryOne">
+                            <img class="media-object" src="~/Media/Stories/Story1/1.png" alt="..." style="width:250px !important;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Ցանկապատին Վրայի Փոսերը</h3>
+                        <h4>Դաւիթ տասը տարեկան մանչուկ մըն էր, որ հակառակ խելացի ըլլալուն, չար ու  ջղայնոտ էր։  Բարկութեան պահուն ան կա՛մ խօսքով կը վիրաւորէր ընկերներն ու հարազատները, կա՛մ ալ կը հարուածէր ընկերները կամ քոյրը։</h4>
+                        <br /><br /><br /><br /> <div class="text-right"> <a href="/Stories/StoryOne" class="btn btn-info" role="button" style="background-color:#a4cf57;border:0px !important;">կարդալ ամբողջութեամբ...</a></div><br />
+                    </div>
+                </li>
+
+                <li><hr /></li>
+                <li class="media">
+                    <div class="pull-left">
+                        <a href="/Stories/StoryTwo">
+                            <img class="media-object" src="~/Media/Stories/Story2/1.jpg" alt="..." style="width:250px !important;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Լուսինը եւ Մայրը</h3>
+                        <h4>
+                            Ժամանակին Արեւը, Քամին եւ Լուսինը քոյրեր էին, իսկ Աստղը` անոնց մայրը։ Օր մը, Որոտումն ու Կայծակը, որոնք անոնց հօրեղբայրն ու հօրաքոյրն էին, երեք քոյրերը ընթրիքի հրաւիրեցին։
+                        </h4> <br /><br />
+                        <br /><br /><div class="text-right"> <a href="/Stories/StoryTwo" class="btn btn-info" role="button" style="background-color:#a4cf57;border:0px !important;">կարդալ ամբողջութեամբ...</a></div><br />
+                    </div>
+                </li>
+                <li><hr /></li>
+                <li class="media">
+                    <div class="pull-left">
+                        <a href="/Stories/StoryThree">
+                            <img class="media-object" src="~/Media/Stories/s3/s1.png" alt="..." style="width:250px !important;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Հնարամիտ* Բանտարկեալը</h3>
+                        <h4>
+                            Ծերունի մը կ՛ապրէր գիւղի մը մէջ։ Ան կ՛ուզէր պարտէզին մէջ գետնախնձոր ցանել, սակայն հողը հերկելու ուժ չունէր։ Իր որդին, որ սովորաբար կ՛օգնէր իրեն, բանտարկուած էր։  
+                        </h4> <br /><br />
+                        <br /><br /><div class="text-right"> <a href="/Stories/StoryThree" class="btn btn-info" role="button" style="background-color:#a4cf57;border:0px !important;">կարդալ ամբողջութեամբ...</a></div><br />
+                    </div>
+                </li>
+
+                <li><br /></li>
+            </ul> 
+            <br /> <br />
+        </div>
+    </div>
+</div>

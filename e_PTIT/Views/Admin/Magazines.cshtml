@@ -1,0 +1,69 @@
+﻿@model IEnumerable<e_PTIT.Models.MagazineEdition>
+
+@{
+    ViewBag.Title = "Magazines";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br /><br />
+<h3>Magazines</h3>
+
+<p>
+    @Html.ActionLink("Create New", "NewEdition")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isCurrentEdition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoverImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublishedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArchivedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isCurrentEdition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoverImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArchivedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditEdition", new { id=item.pkEditionId }) 
+        </td>
+    </tr>
+}
+
+</table>

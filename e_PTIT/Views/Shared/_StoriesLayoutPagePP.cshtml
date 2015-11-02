@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/ptit/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/ptit/css/ptit.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+                <script src="~/Content/ptit/js/html5shiv.js"></script>
+                <script src="~/Content/ptit/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" class="index StoriesBG">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding-bottom:5px !important;">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll navbar-left" style="height:70px !important;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="/Home/Index"><img src="~/images/ptitLettersLogo.jpg" style="width:80px" /></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" style="margin-top:10px;">
+                    <li class="orange">
+                        <div class="divOrange">
+                            <span class="LeftSpanOrangeMenu"><img src="~/images/menuButton/orangeLeft.jpg" /></span>
+                            <a href="/Home/About" class="OrangeMenuLink">Մեր Մասին</a>
+                            <span class="RightSpanOrangeMenu"><img src="~/images/menuButton/orangeRight.jpg" /></span>
+                        </div>
+                    </li>
+                    <li class="purple dropdown">
+                        <div class="divPurple">
+                            <span class="LeftSpanPurpleMenu"><img src="~/images/menuButton/purpleLeft.jpg" /></span>
+                            <a href="#" class="PurpleMenuLink dropdown-toggle" data-toggle="dropdown">Յօդուածներ<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="background-color: #f9f7f4 !important;">
+                                <li><a href="/Articles/Index">ԽՄԲԱԳՐԱԿԱՆ</a></li>
+                                <li><a href="/HealthArticles/Index">ԱՌՈՂՋԱՊԱՀԱԿԱՆ</a></li>
+                            </ul>
+                            <span class="RightSpanPurpleMenu"><img src="~/images/menuButton/purpleRight.jpg" /></span>
+                        </div>
+                    </li> <!-- .dropdown -->
+                    <li class="blue">
+                        <div class="divBlue">
+                            <span class="LeftSpanBlueMenu"><img src="~/images/menuButton/blueLeft.jpg" /></span>
+                            <a href="~/Games/LanguageGames.aspx" class="BlueMenuLink">Լեզուական Խաղեր</a>
+                            <span class="RightSpanBlueMenu"><img src="~/images/menuButton/blueRight.jpg" /></span>
+                        </div>
+                    </li>
+                    <li class="green">
+                        <div class="divGreen">
+                            <span class="LeftSpanGreenMenu"><img src="~/images/menuButton/greenLeft.jpg" /></span>
+                            <a href="/Stories/Index" class="GreenMenuLink">Պատմութիւններ</a>
+                            <span class="RightSpanGreenMenu"><img src="~/images/menuButton/greenRight.jpg" /></span>
+                        </div>
+                    </li>
+                    <li class="red">
+                        <div class="divRed">
+                            <span class="LeftSpanRedMenu"><img src="~/images/menuButton/redLeft.jpg" /></span>
+                            <a href="/Proverbs/Index" class="RedMenuLink">Առակներ</a>
+                            <span class="RightSpanRedMenu"><img src="~/images/menuButton/redRight.jpg" /></span>
+                        </div>
+                    </li>
+                    <li class="darkBlue">
+                        <div class="divDarkBlue">
+                            <span class="LeftSpanDarkBlueMenu"><img src="~/images/menuButton/darkBlueLeft.jpg" /></span>
+                            <a href="#" class="DarkBlueMenuLink dropdown-toggle" data-toggle="dropdown">Այլ Խաղեր<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="background-color: #f9f7f4 !important;">
+                                <li><a href="~/Games/MathGamesList.aspx">ԹՈԻԱԲԱՆԱԿԱՆ ԽԱՂԵՐ</a></li>
+                                <li><a href="~/Games/LogicalGamesList.aspx">ՏՐԱՄԱԲԱՆՈՒԹԵԱՆ ԽԱՂԵՐ</a></li>
+                                <li><a href="~/Games/OtherGamesList.aspx">ԺԱՄԱՆՑԻ ԽԱՂԵՐ</a></li>
+                            </ul>
+                            <span class="RightSpanDarkBlueMenu"><img src="~/images/menuButton/darkBlueRight.jpg" /></span>
+                        </div>
+                    </li>
+                    <li class="yellow">
+                        <div class="divYellow">
+                            <span class="LeftSpanYellowMenu"><img src="~/images/menuButton/yellowLeft.jpg" /></span>
+                            <a href="/Riddles/Index" class="YellowMenuLink">Հանելուկներ</a>
+                            <span class="RightSpanYellowMenu"><img src="~/images/menuButton/yellowRight.jpg" /></span>
+                        </div>
+                    </li>
+                    <li class="violette">
+                        <div class="divViolette">
+                            <span class="LeftSpanVioletteMenu"><img src="~/images/menuButton/violeteLeft.jpg" /></span>
+                            <a href="/Humors/Index" class="VioletteMenuLink">Ժպիտներ</a>
+                            <span class="RightSpanVioletteMenu"><img src="~/images/menuButton/violeteRight.jpg" /></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Header -->
+    <div class="container" style="margin-top:70px;background-color:#f9f7f4;color:#7e09c9;border-left:1px solid #808080;border-right:1px solid #808080;">
+        <div style="margin-top:10px;"><h2 style="background-color:#7e09c9;color:#f9f7f4;border:1px solid #7e09c9;">Ե-ՓԹԻԹ 1</h2></div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <!-- Begin page content -->
+
+
+
+    <div class="container-fluid" style=" padding: 0px !important;">
+        <div class="footer">
+            <div class="text-center">
+                <img src="~/images/footer/newFooter.jpg" />
+            </div>
+            <div class="row" style="padding: 3px; color: #596982; background-color:white; height:50px;">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">Copyright &copy 2015 PTIT. All rights reserved.</div>
+                <div class="col-md-3" style="text-align: right;"><a href="~/Pages/ContactUs.aspx">Contact Us</a></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="~/Content/ptit/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/ptit/js/bootstrap.min.js"></script>
+    <script src="~/Content/ptit/js/bootstrap-submenu.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/Content/ptit/js/jquery.easing.min.js"></script>
+    <script src="~/Content/ptit/js/classie.js"></script>
+    <script src="~/Content/ptit/js/cbpAnimatedHeader.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/ptit/js/agency.js"></script>
+</body>
+</html>

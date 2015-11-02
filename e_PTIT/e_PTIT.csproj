@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7845C302-0CC5-4FF6-8A0A-8BF12D904DC6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>e_PTIT</RootNamespace>
+    <AssemblyName>e_PTIT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\Lezvagan.Master.cs">
+      <DependentUpon>Lezvagan.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Lezvagan.Master.designer.cs">
+      <DependentUpon>Lezvagan.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SiteBasic.Master.cs">
+      <DependentUpon>SiteBasic.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SiteBasic.Master.designer.cs">
+      <DependentUpon>SiteBasic.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\HealthArticlesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HumorsController.cs" />
+    <Compile Include="Controllers\OtherGamesController.cs" />
+    <Compile Include="Controllers\ProverbsController.cs" />
+    <Compile Include="Controllers\RiddlesController.cs" />
+    <Compile Include="Controllers\StoriesController.cs" />
+    <Compile Include="Controllers\TriviasController.cs" />
+    <Compile Include="Games\Crossword.aspx.cs">
+      <DependentUpon>Crossword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\Crossword.aspx.designer.cs">
+      <DependentUpon>Crossword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\FindDifferenceGame.aspx.cs">
+      <DependentUpon>FindDifferenceGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\FindDifferenceGame.aspx.designer.cs">
+      <DependentUpon>FindDifferenceGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\LanguageGames.aspx.cs">
+      <DependentUpon>LanguageGames.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\LanguageGames.aspx.designer.cs">
+      <DependentUpon>LanguageGames.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\LogicalGamesList.aspx.cs">
+      <DependentUpon>LogicalGamesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\LogicalGamesList.aspx.designer.cs">
+      <DependentUpon>LogicalGamesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\MatchingGame.aspx.cs">
+      <DependentUpon>MatchingGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\MatchingGame.aspx.designer.cs">
+      <DependentUpon>MatchingGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\MatchingGameHoriz.aspx.cs">
+      <DependentUpon>MatchingGameHoriz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\MatchingGameHoriz.aspx.designer.cs">
+      <DependentUpon>MatchingGameHoriz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\MatchingGameListing.aspx.cs">
+      <DependentUpon>MatchingGameListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\MatchingGameListing.aspx.designer.cs">
+      <DependentUpon>MatchingGameListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\MathGamesList.aspx.cs">
+      <DependentUpon>MathGamesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\MathGamesList.aspx.designer.cs">
+      <DependentUpon>MathGamesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\OtherGamesList.aspx.cs">
+      <DependentUpon>OtherGamesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\OtherGamesList.aspx.designer.cs">
+      <DependentUpon>OtherGamesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\SelectOneGame.aspx.cs">
+      <DependentUpon>SelectOneGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\SelectOneGame.aspx.designer.cs">
+      <DependentUpon>SelectOneGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\WriteAnswerGame.aspx.cs">
+      <DependentUpon>WriteAnswerGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\WriteAnswerGame.aspx.designer.cs">
+      <DependentUpon>WriteAnswerGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CommonFunctions.cs" />
+    <Compile Include="Models\AdminstratorDataClass.cs" />
+    <Compile Include="Models\EPtitDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EPtitDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MagazineRepositoryModel.cs" />
+    <Compile Include="Models\StoryRepositoryModel.cs" />
+    <Compile Include="Pages\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PtitEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="audio\Audience_Applause-Matthiew11-1206899159.mp3" />
+    <Content Include="audio\bell_sound.mp3" />
+    <Content Include="audio\Blop-Mark_DiAngelo-79054334.mp3" />
+    <Content Include="audio\Kid_Laugh-Mike_Koenig-1673908713.mp3" />
+    <Content Include="audio\SMALL_CROWD_APPLAUSE-Yannick_Lemieux-1268806408.mp3" />
+    <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-datepicker.min.css" />
+    <Content Include="Content\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\newSite.css" />
+    <Content Include="Content\ptit.css" />
+    <Content Include="Content\ptit\css\agency.css" />
+    <Content Include="Content\ptit\css\bootstrap-submenu.css" />
+    <Content Include="Content\ptit\css\bootstrap.css" />
+    <Content Include="Content\ptit\css\bootstrap.min.css" />
+    <Content Include="Content\ptit\css\ptit.css" />
+    <Content Include="Content\ptit\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\ptit\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\ptit\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\ptit\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\ptit\js\agency.js" />
+    <Content Include="Content\ptit\js\bootstrap-submenu.min.js" />
+    <Content Include="Content\ptit\js\bootstrap.js" />
+    <Content Include="Content\ptit\js\bootstrap.min.js" />
+    <Content Include="Content\ptit\js\cbpAnimatedHeader.js" />
+    <Content Include="Content\ptit\js\cbpAnimatedHeader.min.js" />
+    <Content Include="Content\ptit\js\classie.js" />
+    <Content Include="Content\ptit\js\contact_me.js" />
+    <Content Include="Content\ptit\js\html5shiv.js" />
+    <Content Include="Content\ptit\js\jqBootstrapValidation.js" />
+    <Content Include="Content\ptit\js\jquery.easing.min.js" />
+    <Content Include="Content\ptit\js\jquery.js" />
+    <Content Include="Content\ptit\js\respond.min.js" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\layerslider.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\shortcodes.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fireworks\audio\boom1.mp3" />
+    <Content Include="fireworks\audio\boom2.mp3" />
+    <Content Include="fireworks\audio\boom3.mp3" />
+    <Content Include="fireworks\audio\boom4.mp3" />
+    <Content Include="fireworks\audio\pop1.mp3" />
+    <Content Include="fireworks\audio\pop2.mp3" />
+    <Content Include="fireworks\audio\pop3.mp3" />
+    <Content Include="fireworks\audio\pop4.mp3" />
+    <Content Include="fireworks\audio\pop5.mp3" />
+    <Content Include="fireworks\audio\pop6.mp3" />
+    <Content Include="fireworks\demo-only\arrow.gif" />
+    <Content Include="fireworks\demo-only\bottom.gif" />
+    <Content Include="fireworks\demo-only\button-1.png" />
+    <Content Include="fireworks\demo-only\button.png" />
+    <Content Include="fireworks\demo-only\Copy of button.png" />
+    <Content Include="fireworks\demo-only\demo.css" />
+    <Content Include="fireworks\demo-only\demo.js" />
+    <Content Include="fireworks\demo-only\fireworks-header.jpg" />
+    <Content Include="fireworks\demo-only\item.gif" />
+    <Content Include="fireworks\demo-only\slider-1.png" />
+    <Content Include="fireworks\demo-only\slider-bar.gif" />
+    <Content Include="fireworks\demo-only\slider-disabled-1.png" />
+    <Content Include="fireworks\demo-only\slider-disabled.png" />
+    <Content Include="fireworks\demo-only\slider.png" />
+    <Content Include="fireworks\image\blank.gif" />
+    <Content Include="fireworks\image\particles.gif" />
+    <Content Include="fireworks\index.html" />
+    <Content Include="fireworks\script\debug.js" />
+    <Content Include="fireworks\script\fireworks.js" />
+    <Content Include="fireworks\script\soundmanager.js" />
+    <Content Include="fireworks\sound-config.xml" />
+    <Content Include="fireworks\soundcontroller.swf" />
+    <Content Include="fireworks\style\fireworks.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Games\Crossword.aspx" />
+    <Content Include="Games\FindDifferenceGame.aspx" />
+    <Content Include="Games\LanguageGames.aspx" />
+    <Content Include="Games\LogicalGamesList.aspx" />
+    <Content Include="Games\MatchingGame.aspx" />
+    <Content Include="Games\MatchingGameHoriz.aspx" />
+    <Content Include="Games\MatchingGameListing.aspx" />
+    <Content Include="Games\MathGamesList.aspx" />
+    <Content Include="Games\OtherGamesList.aspx" />
+    <Content Include="Games\SelectOneGame.aspx" />
+    <Content Include="Games\WriteAnswerGame.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="images\AboutUsTitle.png" />
+    <Content Include="images\articlesHeader.jpg" />
+    <Content Include="images\aylKhagherBG.png" />
+    <Content Include="images\booksPattern.jpg" />
+    <Content Include="images\camperborderLG.jpg" />
+    <Content Include="images\contactus_title.png" />
+    <Content Include="images\design\flower.png" />
+    <Content Include="images\design\flower_blue.png" />
+    <Content Include="images\design\flower_green.png" />
+    <Content Include="images\design\flower_lavender.png" />
+    <Content Include="images\design\flower_mustard.png" />
+    <Content Include="images\design\flower_pink.png" />
+    <Content Include="images\design\flower_purple.png" />
+    <Content Include="images\design\flower_red.png" />
+    <Content Include="images\design\flower_steelblue.png" />
+    <Content Include="images\design\flower_yellow.png" />
+    <Content Include="images\design\green_sketch.png" />
+    <Content Include="images\design\green_title_bg.png" />
+    <Content Include="images\design\red_sketch.png" />
+    <Content Include="images\design\steelblue_sketch.png" />
+    <Content Include="images\design\white_title_bg.png" />
+    <Content Include="images\design\yellow_sketch.png" />
+    <Content Include="images\flower.png" />
+    <Content Include="images\flower_blue.png" />
+    <Content Include="images\flower_green.png" />
+    <Content Include="images\flower_lavender.png" />
+    <Content Include="images\flower_mustard.png" />
+    <Content Include="images\flower_pink.png" />
+    <Content Include="images\flower_purple.png" />
+    <Content Include="images\flower_red.png" />
+    <Content Include="images\flower_steelblue.png" />
+    <Content Include="images\flower_yellow.png" />
+    <Content Include="images\footer\footerBG.jpg" />
+    <Content Include="images\footer\footerRepeater.jpg" />
+    <Content Include="images\footer\newFooter.jpg" />
+    <Content Include="images\footer\Website_Ptit_5-footer-png24.png" />
+    <Content Include="images\games\armenian\arm-gm-1-a-bg.png" />
+    <Content Include="images\games\armenian\arm-gm-1-q-bg.png" />
+    <Content Include="images\games\armenian\ArmGame1a-01.png" />
+    <Content Include="images\games\armenian\ArmGame1c-01.png" />
+    <Content Include="images\games\armenian\gm-2\cat.png" />
+    <Content Include="images\games\armenian\gm-2\chicken.png" />
+    <Content Include="images\games\armenian\gm-2\cow.png" />
+    <Content Include="images\games\armenian\gm-2\dog.png" />
+    <Content Include="images\games\armenian\gm-2\horse.png" />
+    <Content Include="images\games\armenian\gm-2\lion.png" />
+    <Content Include="images\games\armenian\gm-2\pig.png" />
+    <Content Include="images\games\armenian\gm-2\sheep.png" />
+    <Content Include="images\games\armenian\gm-2\snake.png" />
+    <Content Include="images\games\armenian\gm-2\wolf.png" />
+    <Content Include="images\games\armenian\gm-a-tbl-bg-1.png" />
+    <Content Include="images\games\armenian\gm-a-tbl-foot-1.png" />
+    <Content Include="images\games\armenian\gm-a-tbl-head-1.png" />
+    <Content Include="images\games\armenian\gm-q-tbl-bg-1.png" />
+    <Content Include="images\games\armenian\gm-q-tbl-foot-1.png" />
+    <Content Include="images\games\armenian\gm-q-tbl-head-1.png" />
+    <Content Include="images\games\ArmGame1c-01.png" />
+    <Content Include="images\games\crossword\gm1\bg.png" />
+    <Content Include="images\games\game-bg-6.png" />
+    <Content Include="images\games\game-sel-bg-1.png" />
+    <Content Include="images\games\game-sel-bg-3.png" />
+    <Content Include="images\games\game-sel-bg-4.png" />
+    <Content Include="images\games\game-sel-bg-5.png" />
+    <Content Include="images\games\game-sel-bg-6.png" />
+    <Content Include="images\games\icons\crossword.png" />
+    <Content Include="images\games\icons\difference.jpg" />
+    <Content Include="images\games\icons\guessing.jpg" />
+    <Content Include="images\games\icons\guessing2.jpg" />
+    <Content Include="images\games\icons\matching.jpg" />
+    <Content Include="images\games\icons\maths.jpg" />
+    <Content Include="images\games\matchgamebg1.jpg" />
+    <Content Include="images\games\matchgamebg1.png" />
+    <Content Include="images\games\matchgamebg2.jpg" />
+    <Content Include="images\games\matchgamebg2.png" />
+    <Content Include="images\games\matchgamefoot1.jpg" />
+    <Content Include="images\games\matchgamehead1.jpg" />
+    <Content Include="images\games\math-bg-1.png" />
+    <Content Include="images\games\Maths-Game1b-01.png" />
+    <Content Include="images\games\other\difference\gm-1-a.png" />
+    <Content Include="images\games\other\difference\gm-1-b.png" />
+    <Content Include="images\games\other\difference\gm-2-a.png" />
+    <Content Include="images\games\other\difference\gm-2-b.png" />
+    <Content Include="images\games\other\difference\owl1_350.png" />
+    <Content Include="images\games\other\difference\owl2_350.png" />
+    <Content Include="images\games\other\difference\owl_ans_350.png" />
+    <Content Include="images\games\other\difference\winter1_350.png" />
+    <Content Include="images\games\other\difference\winter2_350.png" />
+    <Content Include="images\games\other\difference\winter_ans_350.png" />
+    <Content Include="images\games\other\logic\gm-2\gm-2-bg.png" />
+    <Content Include="images\games\other\logic\gm-2\gm-22-bg.png" />
+    <Content Include="images\games\other\logic\gm-2\gm-23-bg.png" />
+    <Content Include="images\games\other\logic\gm-2\gm-24-bg.png" />
+    <Content Include="images\games\other\logic\gm-2\gm-25-bg.png" />
+    <Content Include="images\games\other\logic\gm-2\page-bg.png" />
+    <Content Include="images\games\other\math\math-bg-2.png" />
+    <Content Include="images\games\selgamebg1.jpg" />
+    <Content Include="images\games\selgameopt1.jpg" />
+    <Content Include="images\games\selgameopt2.jpg" />
+    <Content Include="images\games\selgameopt3.jpg" />
+    <Content Include="images\games\selgameopt4.jpg" />
+    <Content Include="images\games\selgameopt5.jpg" />
+    <Content Include="images\greenBG.jpg" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\header\aylKhager.jpg" />
+    <Content Include="images\header\hotvadzner.jpg" />
+    <Content Include="images\header\Kids_BG.jpg" />
+    <Content Include="images\header\lezvaganKhagher.jpg" />
+    <Content Include="images\header\ptit_headerLogo.jpg" />
+    <Content Include="images\header\Website_1920HD.jpg" />
+    <Content Include="images\header_bg.png" />
+    <Content Include="images\healthHeader.jpg" />
+    <Content Include="images\homepage\Aragner.png" />
+    <Content Include="images\homepage\aylKhager.png" />
+    <Content Include="images\homepage\badmoutyouner.png" />
+    <Content Include="images\homepage\hanelougner.png" />
+    <Content Include="images\homepage\hotvadzner.png" />
+    <Content Include="images\homepage\jbidner.png" />
+    <Content Include="images\homepage\lezvagan.png" />
+    <Content Include="images\homepage\light.png" />
+    <Content Include="images\homepage\lightResize.png" />
+    <Content Include="images\homepage\merMassin.png" />
+    <Content Include="images\homepage\newHomePage.jpg" />
+    <Content Include="images\jbid.jpg" />
+    <Content Include="images\jbidHeader.jpg" />
+    <Content Include="images\LandingPage\LandingImage.png" />
+    <Content Include="images\Landscape3.jpg" />
+    <Content Include="images\beach.jpg" />
+    <Content Include="images\language-games.png" />
+    <Content Include="images\lezvaganKhagherBG.png" />
+    <Content Include="images\logic-games.png" />
+    <Content Include="images\logo200.png" />
+    <Content Include="images\logoSingle200.png" />
+    <Content Include="images\math-games.png" />
+    <Content Include="images\menuButton\blueLeft.jpg" />
+    <Content Include="images\menuButton\blueRight.jpg" />
+    <Content Include="images\menuButton\darkBlueLeft.jpg" />
+    <Content Include="images\menuButton\darkBlueRight.jpg" />
+    <Content Include="images\menuButton\greenLeft.jpg" />
+    <Content Include="images\menuButton\greenRight.jpg" />
+    <Content Include="images\menuButton\orangeLeft.jpg" />
+    <Content Include="images\menuButton\orangeRight.jpg" />
+    <Content Include="images\menuButton\purpleLeft.jpg" />
+    <Content Include="images\menuButton\purpleRight.jpg" />
+    <Content Include="images\menuButton\violeteLeft.jpg" />
+    <Content Include="images\menuButton\violeteRight.jpg" />
+    <Content Include="images\menuButton\yellowLeft.jpg" />
+    <Content Include="images\menuButton\yellowRight.jpg" />
+    <Content Include="images\other-games.png" />
+    <Content Include="images\proverbPattern.jpg" />
+    <Content Include="images\proverbPatternOP.jpg" />
+    <Content Include="images\proverbsHeader.png" />
+    <Content Include="images\ProverbsTitle.png" />
+    <Content Include="images\ptitLettersLogo.jpg" />
+    <Content Include="images\RiddlesPatternOPjpg.jpg" />
+    <Content Include="images\storiesHeader.png" />
+    <Content Include="images\StoriesPatternOP.jpg" />
+    <Content Include="images\StoriesTitle.png" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\greensock.js" />
+    <Content Include="js\jquery-easing-1.3.js" />
+    <Content Include="js\jquery-migrate.min.js" />
+    <Content Include="js\jquery-transit-modified.js" />
+    <Content Include="js\jquery.bxslider.min.js" />
+    <Content Include="js\jquery.carouFredSel-6.2.0-packed.js" />
+    <Content Include="js\jquery.gmap.min.js" />
+    <Content Include="js\jquery.inview.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.meanmenu.min.js" />
+    <Content Include="js\jquery.nicescroll.min.js" />
+    <Content Include="js\jquery.parallax-1.1.3.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\jquery.smartresize.js" />
+    <Content Include="js\jquery.sticky.js" />
+    <Content Include="js\jquery.tabs.min.js" />
+    <Content Include="js\jquery.tipTip.minified.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\jquery.viewport.js" />
+    <Content Include="js\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="js\layerslider.transitions.js" />
+    <Content Include="js\layerslider\skins\borderlessdark3d\loading.gif" />
+    <Content Include="js\layerslider\skins\borderlessdark3d\nothumb.png" />
+    <Content Include="js\layerslider\skins\borderlessdark3d\shadow.png" />
+    <Content Include="js\layerslider\skins\borderlessdark3d\skin.css" />
+    <Content Include="js\layerslider\skins\borderlessdark3d\skin.png" />
+    <Content Include="js\layerslider\skins\borderlessdark\loading.gif" />
+    <Content Include="js\layerslider\skins\borderlessdark\nothumb.png" />
+    <Content Include="js\layerslider\skins\borderlessdark\shadow.png" />
+    <Content Include="js\layerslider\skins\borderlessdark\skin.css" />
+    <Content Include="js\layerslider\skins\borderlessdark\skin.png" />
+    <Content Include="js\layerslider\skins\borderlesslight3d\loading.gif" />
+    <Content Include="js\layerslider\skins\borderlesslight3d\nothumb.png" />
+    <Content Include="js\layerslider\skins\borderlesslight3d\shadow.png" />
+    <Content Include="js\layerslider\skins\borderlesslight3d\skin.css" />
+    <Content Include="js\layerslider\skins\borderlesslight3d\skin.png" />
+    <Content Include="js\layerslider\skins\borderlesslight\loading.gif" />
+    <Content Include="js\layerslider\skins\borderlesslight\nothumb.png" />
+    <Content Include="js\layerslider\skins\borderlesslight\shadow.png" />
+    <Content Include="js\layerslider\skins\borderlesslight\skin.css" />
+    <Content Include="js\layerslider\skins\borderlesslight\skin.png" />
+    <Content Include="js\layerslider\skins\carousel\loading.gif" />
+    <Content Include="js\layerslider\skins\carousel\nothumb.png" />
+    <Content Include="js\layerslider\skins\carousel\skin.css" />
+    <Content Include="js\layerslider\skins\carousel\skin.png" />
+    <Content Include="js\layerslider\skins\darkskin\loading.gif" />
+    <Content Include="js\layerslider\skins\darkskin\nothumb.png" />
+    <Content Include="js\layerslider\skins\darkskin\skin.css" />
+    <Content Include="js\layerslider\skins\darkskin\skin.png" />
+    <Content Include="js\layerslider\skins\defaultskin\loading.gif" />
+    <Content Include="js\layerslider\skins\defaultskin\nothumb.png" />
+    <Content Include="js\layerslider\skins\defaultskin\skin.css" />
+    <Content Include="js\layerslider\skins\defaultskin\skin.png" />
+    <Content Include="js\layerslider\skins\fullwidthdark\loading.gif" />
+    <Content Include="js\layerslider\skins\fullwidthdark\nothumb.png" />
+    <Content Include="js\layerslider\skins\fullwidthdark\skin.css" />
+    <Content Include="js\layerslider\skins\fullwidthdark\skin.png" />
+    <Content Include="js\layerslider\skins\fullwidth\loading.gif" />
+    <Content Include="js\layerslider\skins\fullwidth\nothumb.png" />
+    <Content Include="js\layerslider\skins\fullwidth\skin.css" />
+    <Content Include="js\layerslider\skins\fullwidth\skin.png" />
+    <Content Include="js\layerslider\skins\glass\loading.gif" />
+    <Content Include="js\layerslider\skins\glass\nothumb.png" />
+    <Content Include="js\layerslider\skins\glass\shadow.png" />
+    <Content Include="js\layerslider\skins\glass\skin.css" />
+    <Content Include="js\layerslider\skins\glass\skin.png" />
+    <Content Include="js\layerslider\skins\lightskin\loading.gif" />
+    <Content Include="js\layerslider\skins\lightskin\nothumb.png" />
+    <Content Include="js\layerslider\skins\lightskin\skin.css" />
+    <Content Include="js\layerslider\skins\lightskin\skin.png" />
+    <Content Include="js\layerslider\skins\minimal\loading.gif" />
+    <Content Include="js\layerslider\skins\minimal\nothumb.png" />
+    <Content Include="js\layerslider\skins\minimal\skin.css" />
+    <Content Include="js\layerslider\skins\minimal\skin.png" />
+    <Content Include="js\layerslider\skins\noskin\loading.gif" />
+    <Content Include="js\layerslider\skins\noskin\nothumb.png" />
+    <Content Include="js\layerslider\skins\noskin\skin.css" />
+    <Content Include="js\layerslider\skins\noskin\skin.png" />
+    <Content Include="js\layerslider\skins\v5\loading.gif" />
+    <Content Include="js\layerslider\skins\v5\nothumb.png" />
+    <Content Include="js\layerslider\skins\v5\skin.css" />
+    <Content Include="js\layerslider\skins\v5\skin.png" />
+    <Content Include="js\modernizr-2.6.2.min.js" />
+    <Content Include="js\ripple\jquery.ripple.css" />
+    <Content Include="js\ripple\jquery.ripple.js" />
+    <Content Include="js\shortcodes.js" />
+    <Content Include="js\twitter\jquery.tweet.min.js" />
+    <Content Include="js\validation.js" />
+    <Content Include="Media\Articles\articleOne.jpg" />
+    <Content Include="Media\Health\health001.jpg" />
+    <Content Include="Media\Jbid\jbid1.jpg" />
+    <Content Include="Media\Jbid\jbid2.jpg" />
+    <Content Include="Media\Jbid\jbid3.jpg" />
+    <Content Include="Media\Jbid\jbid4.jpg" />
+    <Content Include="Media\Proverbs\1\1.jpg" />
+    <Content Include="Media\Proverbs\1\2.jpg" />
+    <Content Include="Media\Proverbs\1\Wolves_1.jpg" />
+    <Content Include="Media\Proverbs\1\Wolves_2.jpg" />
+    <Content Include="Media\Proverbs\2\1.jpg" />
+    <Content Include="Media\Proverbs\3\1.jpg" />
+    <Content Include="Media\Proverbs\3\Proverb3_1.jpg" />
+    <Content Include="Media\riddles\r1.jpg" />
+    <Content Include="Media\Stories\s1\s1.jpg" />
+    <Content Include="Media\Stories\s1\s2.jpg" />
+    <Content Include="Media\Stories\s1\s3.jpg" />
+    <Content Include="Media\Stories\s1\s4.jpg" />
+    <Content Include="Media\Stories\s2\s1.jpg" />
+    <Content Include="Media\Stories\s2\s2.jpg" />
+    <Content Include="Media\Stories\s2\s3.jpg" />
+    <Content Include="Media\Stories\s2\s4.jpg" />
+    <Content Include="Media\Stories\s3\s1.jpg" />
+    <Content Include="Media\Stories\s3\s2.jpg" />
+    <Content Include="Media\Stories\Story1\1.png" />
+    <Content Include="Media\Stories\Story1\2.png" />
+    <Content Include="Media\Stories\Story1\3.png" />
+    <Content Include="Media\Stories\Story1\4.png" />
+    <Content Include="Media\Stories\Story2\1.jpg" />
+    <Content Include="Media\Stories\Story2\2.jpg" />
+    <Content Include="Media\Stories\Story2\3.jpg" />
+    <Content Include="Media\Stories\Story2\4.jpg" />
+    <Content Include="Pages\ContactUs.aspx" />
+    <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="Pages\WebForm2.aspx" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\EPtitDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EPtitDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="fonts\Arial AM.ttf" />
+    <Content Include="Content\ptit\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\ptit\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\ptit\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\ptit\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\ptit\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\ptit\font-awesome\less\core.less" />
+    <Content Include="Content\ptit\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\ptit\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\ptit\font-awesome\less\icons.less" />
+    <Content Include="Content\ptit\font-awesome\less\larger.less" />
+    <Content Include="Content\ptit\font-awesome\less\list.less" />
+    <Content Include="Content\ptit\font-awesome\less\mixins.less" />
+    <Content Include="Content\ptit\font-awesome\less\path.less" />
+    <Content Include="Content\ptit\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\ptit\font-awesome\less\spinning.less" />
+    <Content Include="Content\ptit\font-awesome\less\stacked.less" />
+    <Content Include="Content\ptit\font-awesome\less\variables.less" />
+    <Content Include="Content\ptit\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_core.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_list.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_path.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\ptit\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\ptit\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\ptit\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\ptit\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\ptit\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Common\Site.Master" />
+    <Content Include="Common\Lezvagan.Master" />
+    <Content Include="js\ripple\bower.json" />
+    <Content Include="js\ripple\jquery.ripple.scss" />
+    <Content Include="Common\SiteBasic.Master" />
+    <Content Include="js\twitter\b86fd48d3130d55d34dc7e560fcff7f7.json" />
+    <Content Include="js\twitter\bd050bd04ac22145102943a594cf98fa.json" />
+    <Content Include="js\twitter\index.php" />
+    <Content Include="js\twitter\lib\tmhOAuth.php" />
+    <Content Include="js\twitter\lib\tmhUtilities.php" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\scrolling-nav.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="skins\avocado\style.css" />
+    <Content Include="skins\blueiris\style.css" />
+    <Content Include="skins\blueturquoise\style.css" />
+    <Content Include="skins\blue\style.css" />
+    <Content Include="skins\brown\style.css" />
+    <Content Include="skins\burntsienna\style.css" />
+    <Content Include="skins\chillipepper\style.css" />
+    <Content Include="skins\chocolate\style.css" />
+    <Content Include="skins\eggplant\style.css" />
+    <Content Include="skins\electricblue\style.css" />
+    <Content Include="skins\graasgreen\style.css" />
+    <Content Include="skins\gray\style.css" />
+    <Content Include="skins\green\style.css" />
+    <Content Include="skins\orange\style.css" />
+    <Content Include="skins\palebrown\style.css" />
+    <Content Include="skins\pink\style.css" />
+    <Content Include="skins\radiantorchid\style.css" />
+    <Content Include="skins\red\style.css" />
+    <Content Include="skins\skyblue\style.css" />
+    <Content Include="skins\yellow\style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About__X.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Stories\Index.cshtml" />
+    <Content Include="Views\Stories\StoryOne.cshtml" />
+    <Content Include="Views\Stories\StoryTwo.cshtml" />
+    <Content Include="Views\Proverbs\Index.cshtml" />
+    <Content Include="Views\Proverbs\ProverbOne.cshtml" />
+    <Content Include="Views\Proverbs\ProverbTwo__X.cshtml" />
+    <Content Include="Views\Proverbs\ProverbThree.cshtml" />
+    <Content Include="Views\Riddles\Index.cshtml" />
+    <Content Include="Views\Trivias\Index.cshtml" />
+    <Content Include="Views\Admin\Magazines.cshtml" />
+    <Content Include="Views\Admin\NewEdition.cshtml" />
+    <Content Include="Views\Admin\EditEdition.cshtml" />
+    <Content Include="Views\Admin\Stories.cshtml" />
+    <Content Include="Views\Admin\NewStory.cshtml" />
+    <Content Include="Views\Admin\EditStory.cshtml" />
+    <Content Include="Views\Admin\StoryContents.cshtml" />
+    <Content Include="Views\Admin\NewStoryContent.cshtml" />
+    <Content Include="Views\Admin\EditStoryContent.cshtml" />
+    <Content Include="Views\Admin\Proverbs.cshtml" />
+    <Content Include="Views\Admin\NewProverb.cshtml" />
+    <Content Include="Views\Admin\EditProverb.cshtml" />
+    <Content Include="Views\Admin\Humors.cshtml" />
+    <Content Include="Views\Admin\NewHumor.cshtml" />
+    <Content Include="Views\Admin\EditHumor.cshtml" />
+    <Content Include="Views\Admin\ProverbContents.cshtml" />
+    <Content Include="Views\Admin\NewProverbContent.cshtml" />
+    <Content Include="Views\Admin\EditProverbContent.cshtml" />
+    <Content Include="Views\Admin\HumorContents.cshtml" />
+    <Content Include="Views\Admin\NewHumorContent.cshtml" />
+    <Content Include="Views\Admin\EditHumorContent.cshtml" />
+    <Content Include="Views\Admin\Riddles.cshtml" />
+    <Content Include="Views\Admin\NewRiddle.cshtml" />
+    <Content Include="Views\Admin\EditRiddle.cshtml" />
+    <Content Include="Views\Admin\NewMatchingGame.cshtml" />
+    <Content Include="Views\Admin\MatchingGames.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Admin\EditMatchingGame.cshtml" />
+    <Content Include="Views\Shared\_InnerPageLayout.cshtml" />
+    <Content Include="Views\Admin\MatchingGameAnswers.cshtml" />
+    <Content Include="Views\Admin\NewMatchingGameAnswer.cshtml" />
+    <Content Include="Views\Admin\EditMatchingGameAnswer.cshtml" />
+    <Content Include="Views\Admin\MatchingGameQuestions.cshtml" />
+    <Content Include="Views\Admin\NewMatchingGameQuestion.cshtml" />
+    <Content Include="Views\Admin\EditMatchingGameQuestion.cshtml" />
+    <Content Include="Views\Shared\_LandingLayoutPage.cshtml" />
+    <Content Include="Views\Shared\_ContentLayoutPage.cshtml" />
+    <Content Include="Views\OtherGames\Index.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Shared\_LayoutHomePage.cshtml" />
+    <Content Include="Views\Shared\_ProverbLayoutPage.cshtml" />
+    <Content Include="Views\Shared\_StoriesLayoutPage.cshtml" />
+    <Content Include="Views\Shared\_RiddlesLayoutPage.cshtml" />
+    <Content Include="Views\Shared\_InnerLayoutPagePP.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Shared\_ProverbLayoutPagePP.cshtml" />
+    <Content Include="Views\Shared\_StoriesLayoutPagePP.cshtml" />
+    <Content Include="Views\Stories\StoryThree.cshtml" />
+    <Content Include="Views\Shared\_HumorLayoutPagePP.cshtml" />
+    <Content Include="Views\Humors\Index.cshtml" />
+    <Content Include="Views\Shared\_RiddlesLayoutPagPP.cshtml" />
+    <Content Include="Views\Articles\Index.cshtml" />
+    <Content Include="Views\HealthArticles\Index.cshtml" />
+    <Content Include="Views\Shared\_ArticlesLayoutPagPP.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\EPtitDataClasses.dbml.layout">
+      <DependentUpon>EPtitDataClasses.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61512</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61513/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

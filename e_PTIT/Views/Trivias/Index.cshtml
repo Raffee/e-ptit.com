@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Ժպիտներ";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="clearfix" style="padding-top:150px; margin:30px !important">
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="panel panel-default divPanelborder">
+                <div class="panel-heading divPinkPanelHeader">
+                    <h3 class="panel-title">&nbsp;Քիչ մը ժպիտ</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-triangle-right"><b>Մայրը՝</b></span> "Ինչո՞ւ դարձեալ տկար նիշ մը ստացեր ես, ուսուցիչին հարցումը չհասկցա՞ր":
+                            <br />
+                            <span class="glyphicon glyphicon-triangle-right"><b> Տղան՝ </b></span> " Հասկցայ մայրիկ, սակայն ուսուցիչը իմ տուած պատասխանս  չհասկցաւ ":
+                        </div>
+                    </div>
+                    <br />
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-triangle-right"><b>Ուսուցիչը՝</b></span>  կը բացատրէր թէ երկրագունդը կլոր է։
+                            <br /> <span class="glyphicon glyphicon-triangle-right"><b>Աշակերտը՝</b></span> Երկիրը քառակուսի է ոչ թէ կլոր։
+                            <br />  <span class="glyphicon glyphicon-triangle-right"><b>Ուսուցիչը՝</b></span>  Ո՞վ քեզի ըսաւ թէ քառակուսի է։
+                            <br /> <span class="glyphicon glyphicon-triangle-right"><b>Աշակերտը՝</b></span> մեծ եղբայրս, անցեալ օր կ՛ըսէր թէ գացած է աշխարհի  չորս անկիւնները։
+                        </div>
+                    </div>
+                    <br />
+                    <hr />
+                    @**@
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="panel panel-default divPanelborder">
+                    <div class="panel-heading divBluePanelHeader">
+                        <h3 class="panel-title">&nbsp;Պատմութիւններ</h3>
+                    </div>
+                    <div class="panel-body divPanelborder">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="pull-left">
+                                    <a href="/Stories/StoryOne">
+                                        <img class="media-object" src="~/Media/Stories/Story1/1.png" alt="..." style="width:90px !important;">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Ցանկապատին Վրայի Փոսերը</h4>
+                                    Դաւիթ տասը տարեկան մանչուկ մըն էր, որ հակառակ խելացի ըլլալուն, չար ու  ջղայնոտ էր։  Բարկութեան պահուն ան կա՛մ խօսքով կը վիրաւորէր ընկերներն ու հարազատները, կա՛մ ալ կը հարուածէր ընկերները կամ քոյրը։
+                                    <span class="text-right"> <a href="/Stories/StoryOne" class="btn btn-info" role="button">կարդալ ամբողջությամբ...</a></span>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="pull-left">
+                                    <a href="/Stories/StoryTwo">
+                                        <img class="media-object" src="~/Media/Stories/Story2/1.jpg" alt="..." style="width:90px !important;">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Լուսինը եւ Մայրը</h4>
+                                    Ժամանակին Արեւը, Քամին եւ Լուսինը քոյրեր էին, իսկ Աստղը` անոնց մայրը։ Օր մը, Որոտումն ու Կայծակը, որոնք անոնց հօրեղբայրն ու հօրաքոյրն էին, երեք քոյրերը ընթրիքի հրաւիրեցին։ <br /><span class="text-right"> <a href="/Stories/StoryTwo" class="btn btn-info" role="button">կարդալ ամբողջությամբ...</a></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="panel panel-default divPanelborder">
+                    <div class="panel-heading divLavenderPanelHeader">
+                        <h3 class="panel-title">&nbsp;Հանելուկներ</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class=""><b>&nbsp; 1 :</b></span>Ներսս հուր է Դուրսս՝ մուր Ի՞նչ եմ ես։
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"><button onclick="toggleTargetControl('answer1');" id="getAnswer" class="btn btn-info">պատասխան </button></div>
+                            <div class="col-md-6 answer1 text-right" id="answer1" style="display:none;"><span class=""><b>ծխնելոյզ</b></span></div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class=""><b>&nbsp; 2 :</b></span>Ձեռքիս մէջ ծաղիկ մը կայ, կը բացուի երբ  անձրեւ  գայ Ի՞նչ եմ ես։
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"><button onclick="toggleTargetControl('answer2');" id="getAnswer" class="btn btn-info">պատասխան </button></div>
+                            <div class="col-md-6 answer2 text-right" id="answer2" style="display:none;"><span class=""><b>հովանոց</b></span></div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class=""><b>&nbsp; 3 :</b></span>Ի ՞նչ  է այն, որ սեւ է երբ գնես, կարմիր է երբ գործածես, մոխրագոյն է երբ թափես։
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"><button onclick="toggleTargetControl('answer3');" id="getAnswer" class="btn btn-info">պատասխան </button></div>
+                            <div class="col-md-6 answer3 text-right" id="answer3" style="display:none;"><span class=""><b>ածուխ</b></span></div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

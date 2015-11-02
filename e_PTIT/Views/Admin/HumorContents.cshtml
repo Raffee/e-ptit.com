@@ -1,0 +1,44 @@
+﻿@model IEnumerable<e_PTIT.Models.HumorContent>
+
+@{
+    ViewBag.Title = "Humor Contents";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<h3 style="padding-top:10px;">Humor Contents</h3>
+<h4>
+    @Html.ActionLink("Create New", "NewHumorContent")
+</h4> 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fkHumorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pageNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pageName)
+        </th>       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fkHumorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pageNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pageName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditHumorContent", new { id=item.pkHumorPageId }) 
+        </td>
+    </tr>
+}
+
+</table>

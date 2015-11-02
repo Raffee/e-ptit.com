@@ -1,0 +1,445 @@
+﻿body {
+    overflow-x: hidden;
+    background-color: #f9f7f4;
+}
+
+/* Menu Orange Style */
+.navbar-nav li.orange {
+}
+
+.divOrange {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divOrange a:link,
+    .divOrange a:visited {
+        border-top: solid #ffa506 1px !important;
+        border-bottom: solid #ffa506 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #ffa506 !important;
+        text-decoration: none;
+    }
+
+    .divOrange a:hover,
+    .divOrange a:active {
+        border-top: solid #ffa506 1px !important;
+        border-bottom: solid #ffa506 1px !important;
+        margin-top: 5px;
+        color: #ffa506 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanOrangeMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanOrangeMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.OrangeMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End Orange  Menu Style*/
+
+/* Menu Purple Style */
+.navbar-nav li.purple {
+}
+
+.divPurple {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divPurple a:link,
+    .divPurple a:visited {
+        border-top: solid #7e09c9 1px !important;
+        border-bottom: solid #7e09c9 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #7e09c9 !important;
+        text-decoration: none;
+    }
+
+    .divPurple a:hover,
+    .divPurple a:active {
+        border-top: solid #7e09c9 1px !important;
+        border-bottom: solid #7e09c9 1px !important;
+        margin-top: 5px;
+        color: #7e09c9 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanPurpleMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanPurpleMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.PurpleMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End Purple  Menu Style*/
+/* Menu Blue Style */
+.navbar-nav li.blue {
+}
+
+.divBlue {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divBlue a:link,
+    .divBlue a:visited {
+        border-top: solid #7a8af9 1px !important;
+        border-bottom: solid #7a8af9 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #7a8af9 !important;
+        text-decoration: none;
+    }
+
+    .divBlue a:hover,
+    .divBlue a:active {
+        border-top: solid #7a8af9 1px !important;
+        border-bottom: solid #7a8af9 1px !important;
+        margin-top: 5px;
+        color: #7a8af9 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanBlueMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanBlueMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.BlueMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End Blue  Menu Style*/
+/* Menu Green Style */
+.navbar-nav li.green {
+}
+
+.divGreen {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divGreen a:link,
+    .divGreen a:visited {
+        border-top: solid #a0e254 1px !important;
+        border-bottom: solid #a0e254 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #a0e254 !important;
+        text-decoration: none;
+    }
+
+    .divGreen a:hover,
+    .divGreen a:active {
+        border-top: solid #a0e254 1px !important;
+        border-bottom: solid #a0e254 1px !important;
+        margin-top: 5px;
+        color: #a0e254 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanGreenMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanGreenMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.GreenMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End Green  Menu Style*/
+/* Menu Red Style */
+.navbar-nav li.red {
+}
+
+.divRed {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divRed a:link,
+    .divRed a:visited {
+        border-top: solid #f75e74 1px !important;
+        border-bottom: solid #f75e74 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #f75e74 !important;
+        text-decoration: none;
+    }
+
+    .divRed a:hover,
+    .divRed a:active {
+        border-top: solid #f75e74 1px !important;
+        border-bottom: solid #f75e74 1px !important;
+        margin-top: 5px;
+        color: #f75e74 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanRedMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanRedMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RedMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End Red  Menu Style*/
+/* Menu Yellow Style */
+.navbar-nav li.yellow {
+}
+
+.divYellow {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divYellow a:link,
+    .divYellow a:visited {
+        border-top: solid #f9d84b 1px !important;
+        border-bottom: solid #f9d84b 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #f9d84b !important;
+        text-decoration: none;
+    }
+
+    .divYellow a:hover,
+    .divYellow a:active {
+        border-top: solid #f9d84b 1px !important;
+        border-bottom: solid #f9d84b 1px !important;
+        margin-top: 5px;
+        color: #f9d84b !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanYellowMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanYellowMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.YellowMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End Yellow  Menu Style*/
+/* Menu darkBlue Style */
+.navbar-nav li.darkBlue {
+}
+
+.divDarkBlue {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divDarkBlue a:link,
+    .divDarkBlue a:visited {
+        border-top: solid #2a89d8 1px !important;
+        border-bottom: solid #2a89d8 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #2a89d8 !important;
+        text-decoration: none;
+    }
+
+    .divDarkBlue a:hover,
+    .divDarkBlue a:active {
+        border-top: solid #2a89d8 1px !important;
+        border-bottom: solid #2a89d8 1px !important;
+        margin-top: 5px;
+        color: #2a89d8 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanDarkBlueMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanDarkBlueMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.DarkBlueMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End DarkBlue Menu Style*/
+/* Menu violette Style */
+.navbar-nav li.violette {
+}
+
+.divViolette {
+    margin-top: 5px;
+    width: 100%;
+    height: 24px;
+    margin: 5px;
+}
+
+    .divViolette a:link,
+    .divViolette a:visited {
+        border-top: solid #e058b0 1px !important;
+        border-bottom: solid #e058b0 1px !important;
+        margin-top: 5px;
+        color: #f9f7f4 !important;
+        background-color: #e058b0 !important;
+        text-decoration: none;
+    }
+
+    .divViolette a:hover,
+    .divViolette a:active {
+        border-top: solid #e058b0 1px !important;
+        border-bottom: solid #e058b0 1px !important;
+        margin-top: 5px;
+        color: #e058b0 !important;
+        background-color: #f9f7f4 !important;
+        text-decoration: none;
+    }
+
+.LeftSpanVioletteMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.RightSpanVioletteMenu {
+    float: left;
+    width: 4px;
+    margin-top: 5px;
+}
+
+.VioletteMenuLink {
+    float: left;
+    height: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+/*End violette Menu Style*/
+.dropdown-backdrop {
+  position: static;
+}
+/* Footer*/
+.footer {
+    width: 100%;
+    height: 300px;
+    background-image: url('../../../images/footer/footerRepeater.jpg');
+    background-repeat:repeat-x;
+}
+
+.aboutUsBG {
+    background-color:#f8e587;
+}
+.ProverbsBG {
+    background-image: url('../../../images/proverbPattern.jpg');
+    background-repeat: repeat-y repeat-x;
+} 
+.ArticlesBG {
+   background-color:#e7c9fb;
+} 
+.StoriesBG {
+   background-color:#d0f195;
+} 
+.HumorBG {
+    background-color:#fac5e7;
+} 
+.RiddleBG {
+    background-color:#b7d5ef;
+} 
+.OtherGamesBG {
+    background-image: url('../../../images/aylKhagherBG.png');
+    background-repeat: repeat-y repeat-x;
+}
+
+.LanguageGamesBG {
+    background-image: url('../../../images/lezvaganKhagherBG.png');
+    background-repeat: repeat-y repeat-x;
+}

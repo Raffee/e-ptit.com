@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ՓԹԻԹ</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="RiddlesBG">
+    <nav class="navbar navbar-custom navbar-fixed-top whiteBackground72">
+        <div class="masterHeadar72">
+            <div class="col-md-12 col-sm-12 col-xs-12 vCenterContainer72">
+                <div class="center72 text-center">
+                    <img src="~/images/header/aylKhager.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class=" container-fluid" style="border-top:5px solid #CCCCCC;">
+            <div class="container" style=" margin-top:-5px;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @*<a class="navbar-brands" href="/Home/Index"> ՓԹԻԹ</a>*@
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="orange">
+                            <div class="divOrange">
+                                <span class="LeftSpanOrangeMenu"><img src="~/images/menuButton/orangeLeft.jpg" /></span>
+                                <a href="#" class="OrangeMenuLink">Մեր Մասին</a>
+                                <span class="RightSpanOrangeMenu"><img src="~/images/menuButton/orangeRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="purple">
+                            <div class="divPurple">
+                                <span class="LeftSpanPurpleMenu"><img src="~/images/menuButton/purpleLeft.jpg" /></span>
+                                <a href="#" class="PurpleMenuLink">Յօդուածներ</a>
+                                <span class="RightSpanPurpleMenu"><img src="~/images/menuButton/purpleRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="blue">
+                            <div class="divBlue">
+                                <span class="LeftSpanBlueMenu"><img src="~/images/menuButton/blueLeft.jpg" /></span>
+                                <a href="#" class="BlueMenuLink">Լեզուական Խաղեր</a>
+                                <span class="RightSpanBlueMenu"><img src="~/images/menuButton/blueRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="green">
+                            <div class="divGreen">
+                                <span class="LeftSpanGreenMenu"><img src="~/images/menuButton/greenLeft.jpg" /></span>
+                                <a href="#" class="GreenMenuLink">Պատմութիւններ</a>
+                                <span class="RightSpanGreenMenu"><img src="~/images/menuButton/greenRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="red">
+                            <div class="divRed">
+                                <span class="LeftSpanRedMenu"><img src="~/images/menuButton/redLeft.jpg" /></span>
+                                <a href="#" class="RedMenuLink">Առակներ</a>
+                                <span class="RightSpanRedMenu"><img src="~/images/menuButton/redRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="yellow">
+                            <div class="divYellow">
+                                <span class="LeftSpanYellowMenu"><img src="~/images/menuButton/yellowLeft.jpg" /></span>
+                                <a href="#" class="YellowMenuLink">Այլ Խաղեր</a>
+                                <span class="RightSpanYellowMenu"><img src="~/images/menuButton/yellowRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="darkBlue">
+                            <div class="divDarkBlue">
+                                <span class="LeftSpanDarkBlueMenu"><img src="~/images/menuButton/darkBlueLeft.jpg" /></span>
+                                <a href="#" class="DarkBlueMenuLink">Հանելուկներ</a>
+                                <span class="RightSpanDarkBlueMenu"><img src="~/images/menuButton/darkBlueRight.jpg" /></span>
+                            </div>
+                        </li>
+                        <li class="violette">
+                            <div class="divViolette">
+                                <span class="LeftSpanVioletteMenu"><img src="~/images/menuButton/violeteLeft.jpg" /></span>
+                                <a href="#" class="VioletteMenuLink">Ժպիտներ</a>
+                                <span class="RightSpanVioletteMenu"><img src="~/images/menuButton/violeteRight.jpg" /></span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div style="margin-top:110px;">
+            @RenderBody()
+        </div>
+        <div class='row footer'>
+            <div class='col-md-12 col-sm-12 col-xs-12'>
+
+                <div class="footerImage center72 text-center">
+                    <img src="~/images/footer/Website_Ptit_5-footer-png24.png" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

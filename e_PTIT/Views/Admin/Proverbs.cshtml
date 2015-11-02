@@ -1,0 +1,62 @@
+﻿@model IEnumerable<e_PTIT.Models.Proverb>
+
+@{
+    ViewBag.Title = "Proverbs";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<h3 style="padding-top:10px;">Proverbs</h3>
+<h4 style="margin-bottom:10px;"> 
+    <span class="pull-left">
+        @Html.ActionLink("Create New", "NewProverb")
+    </span>
+    <span class="pull-right">
+        @Html.ActionLink("Proverb Contents", "ProverbContents")
+    </span>
+</h4>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fkEditionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShowOnHomePage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fkEditionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShowOnHomePage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditProverb", new { id = item.pkProverbId })
+                </td>
+            </tr>
+        }
+
+    </table>

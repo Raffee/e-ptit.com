@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "ՓԹԻԹ";
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+
+<div class="container" style="margin-top:0px;width:1000px;height:582px;position:relative;">
+
+
+    <div style="">
+        <img src="~/images/homepage/newHomePage.jpg" id="hdr" name="hdr" usemap="#hdrMap" border="0" />
+        <map name="hdrMap" style="cursor:pointer;">
+            <area alt="aylkhagerMap" shape="poly"
+                  coords="31, 420, 35, 475, 44, 495, 49, 507, 63, 522, 119, 531, 145, 526, 166, 508, 162, 485, 156, 457, 153, 438, 150, 415, 148, 390, 131, 379, 103, 377, 80, 371, 48, 370, 36, 378, 34, 399"
+                  href="~/Games/MathGamesList.aspx" style="text-decoration:none;outline : none;" />
+            <area alt="lezvaganKhagher" shape="poly" coords="406, 313, 402, 411, 407, 486, 472, 493, 505, 493, 652, 490, 659, 482, 657, 310" href="~/Games/LanguageGames.aspx" style="text-decoration:none;outline : none;" />
+            <area alt="aragner" shape="rect" coords="277, 108, 426, 275" href="/Proverbs/Index" style="text-decoration:none;outline : none;" />
+            <area alt="badmoutyouner" shape="rect" coords="508, 162, 686, 278" href="/Stories/Index" style="text-decoration:none;outline : none;" />
+            <area alt="AboutUs" shape="rect" coords="132, 206, 221, 317" href="/Home/About" style="text-decoration:none;outline : none;" />
+            <area alt="Hotvadz" shape="rect" coords="664, 459, 855, 558" href="/Articles/Index" style="text-decoration:none;outline : none;" />
+            <area alt="Riddles" shape="rect" coords="854, 301, 968, 408" href="/Riddles/Index" style="text-decoration:none;outline : none;" />
+            <area alt="Humor" shape="rect" coords="869, 134, 970, 262" href="/Humors/Index" style="text-decoration:none;outline : none;" />
+            <area shape="circle" coords="226, 412, 20" onmouseover="lightMouseIn();" onmouseout="lightMouseOut();" style="text-decoration:none;outline:none;cursor:pointer;" />
+        </map>
+    </div>
+    <div id="lightImage" style="position:absolute;left:327px;top:0px;z-index:1;display:none;">
+        <img src="~/images/homepage/lightResize.png" />
+    </div>
+
+
+    <div class="row" style="padding-left: 13px; color: #596982;  height:50px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">Copyright &copy 2015 PTIT. All rights reserved.</div>
+        <div class="col-md-4" style="text-align: right;"><a href="~/Pages/ContactUs.aspx">Contact Us</a></div>
+        <div class="col-md-1"></div>
+    </div>
+
+
+</div>
+
+<script>
+    function aylKhaghgerMouseIn() {
+        document.getElementById("aylKhagerImage").style.display = "block";
+    }
+
+    function aylKhaghgerMouseOut() {
+        document.getElementById("aylKhagerImage").style.display = "none";
+    }
+    function lightMouseIn() {
+        document.getElementById("lightImage").style.display = "block";
+    }
+
+    function lightMouseOut() {
+        document.getElementById("lightImage").style.display = "none";
+    }
+</script>
+
+@*Riddles*@
+@*<div class="row ">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="color:#f9f7f4;background-color:#2a89d8;border-left:4px solid #4f88b7;border-top:1px solid #4f88b7;border-bottom:1px solid #4f88b7;">
+            <h4>
+                Հանելուկներ
+            </h4>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-10  text-center">
+        <br/>
+        <div class="row"  style="background-color:#f9f7f4;">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                        <h3 style="color:#4f88b7;"><b>&nbsp; 1 :</b>Ներսս հուր է Դուրսս՝ մուր Ի՞նչ եմ ես։</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"><button onclick="toggleTargetControl('answer1');" id="getAnswer" class="btn btn-info" style="background-color:#4f88b7;border:0px !important;">պատասխան </button></div>
+                    <h4 class="col-md-6 answer1 text-right" id="answer1" style="display:none;color:#4f88b7;"><span class=""><b>ծխնելոյզ</b></span></h4>
+                </div>
+                <hr />
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                        <h3 style="color:#4f88b7;"><b>&nbsp; 2 :</b>ձեռքիս մէջ ծաղիկ մը կայ, կը բացուի երբ անձրեւ գայ ի՞նչ եմ ես։ </h3>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"><button onclick="toggleTargetControl('answer2');" id="getAnswer" class="btn btn-info" style="background-color:#4f88b7;border:0px !important;">պատասխան </button></div>
+                    <h4 class="col-md-6 answer2 text-right" id="answer2" style="display:none;color:#4f88b7;"><span class=""><b>հովանոց</b></span></h4>
+                </div>
+                <hr />
+
+            </div>
+        </div>
+    </div>*@

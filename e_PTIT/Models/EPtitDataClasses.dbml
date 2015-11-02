@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ptit" Class="EPtitDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=e-ptit.com;Initial Catalog=ptit;Persist Security Info=True;User ID=PtitDbUser2015" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ptitConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Administrator" Member="Administrators">
+    <Type Name="Administrators">
+      <Column Name="pkadminId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="createdOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="isActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Riddle" Member="Riddles">
+    <Type Name="Riddle">
+      <Column Name="pkRiddleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="fkAnswerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Answer_Riddle" Member="Answer1" ThisKey="fkAnswerId" OtherKey="pkAnswerId" Type="Answer" IsForeignKey="true" />
+      <Association Name="MagazineEdition_Riddle" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Answer" Member="Answers">
+    <Type Name="Answer">
+      <Column Name="pkAnswerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContentText" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="fkRiddleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Answer_Riddle" Member="Riddles" ThisKey="pkAnswerId" OtherKey="fkAnswerId" Type="Riddle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StoryContent" Member="StoryContents">
+    <Type Name="StoryContent">
+      <Column Name="pkStoryPageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkStoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkMediaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pageNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="pageContent" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BackgroundName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="gadgetImageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Story_StoryContent" Member="Story" ThisKey="fkStoryId" OtherKey="pkStoryId" Type="Story" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Story" Member="Stories">
+    <Type Name="Story">
+      <Column Name="pkStoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="summary" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FontName" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumberOfPages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowOnHomePage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Story_StoryContent" Member="StoryContents" ThisKey="pkStoryId" OtherKey="fkStoryId" Type="StoryContent" />
+      <Association Name="ContentTemplate_Story" Member="ContentTemplate" ThisKey="fkTemplateId" OtherKey="pkContentTemplateId" Type="ContentTemplate" IsForeignKey="true" />
+      <Association Name="MagazineEdition_Story" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContentTemplate" Member="ContentTemplates">
+    <Type Name="ContentTemplate">
+      <Column Name="pkContentTemplateId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TemplateName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TemplateBody" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ContentTemplate_Story" Member="Stories" ThisKey="pkContentTemplateId" OtherKey="fkTemplateId" Type="Story" />
+      <Association Name="ContentTemplate_Proverb" Member="Proverbs" ThisKey="pkContentTemplateId" OtherKey="fkTemplateId" Type="Proverb" />
+      <Association Name="ContentTemplate_Humor" Member="Humors" ThisKey="pkContentTemplateId" OtherKey="fkTemplateId" Type="Humor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="pkStaffId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Nickname" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkPictureId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BioText" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MagazineEdition" Member="MagazineEditions">
+    <Type Name="MagazineEdition">
+      <Column Name="pkEditionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="isCurrentEdition" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CoverImage" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PublishedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ArchivedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="MagazineEdition_Riddle" Member="Riddles" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="Riddle" />
+      <Association Name="MagazineEdition_Story" Member="Stories" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="Story" />
+      <Association Name="MagazineEdition_Proverb" Member="Proverbs" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="Proverb" />
+      <Association Name="MagazineEdition_Humor" Member="Humors" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="Humor" />
+      <Association Name="MagazineEdition_WriteAnswerGame" Member="WriteAnswerGames" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="WriteAnswerGame" />
+      <Association Name="MagazineEdition_SelectOneGame" Member="SelectOneGames" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="SelectOneGame" />
+      <Association Name="MagazineEdition_FindDifferenceGame" Member="FindDifferenceGames" ThisKey="pkEditionId" OtherKey="fkEditionId" Type="FindDifferenceGame" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Proverb" Member="Proverbs">
+    <Type Name="Proverb">
+      <Column Name="pkProverbId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="summary" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FontName" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumberOfPages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowOnHomePage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Proverb_ProverbContent" Member="ProverbContents" ThisKey="pkProverbId" OtherKey="fkProverbId" Type="ProverbContent" />
+      <Association Name="ContentTemplate_Proverb" Member="ContentTemplate" ThisKey="fkTemplateId" OtherKey="pkContentTemplateId" Type="ContentTemplate" IsForeignKey="true" />
+      <Association Name="MagazineEdition_Proverb" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProverbContent" Member="ProverbContents">
+    <Type Name="ProverbContent">
+      <Column Name="pkProverbPageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkProverbId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pageNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="pageContent" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BackgroundName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="gadgetImageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Proverb_ProverbContent" Member="Proverb" ThisKey="fkProverbId" OtherKey="pkProverbId" Type="Proverb" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HumorContent" Member="HumorContents">
+    <Type Name="HumorContent">
+      <Column Name="pkHumorPageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkHumorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pageNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="pageContent" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BackgroundName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="gadgetImageName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Humor_HumorContent" Member="Humor" ThisKey="fkHumorId" OtherKey="pkHumorId" Type="Humor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Humor" Member="Humors">
+    <Type Name="Humor">
+      <Column Name="pkHumorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="summary" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FontName" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumberOfPages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowOnHomePage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Humor_HumorContent" Member="HumorContents" ThisKey="pkHumorId" OtherKey="fkHumorId" Type="HumorContent" />
+      <Association Name="ContentTemplate_Humor" Member="ContentTemplate" ThisKey="fkTemplateId" OtherKey="pkContentTemplateId" Type="ContentTemplate" IsForeignKey="true" />
+      <Association Name="MagazineEdition_Humor" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.WriteAnswerGame" Member="WriteAnswerGames">
+    <Type Name="WriteAnswerGame">
+      <Column Name="pkWriteAnswerGameId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="QuestionText" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="QuestionHTML" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AnswerText" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageBG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuestionStyle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="MagazineEdition_WriteAnswerGame" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.SelectOneGameAnswer" Member="SelectOneGameAnswers">
+    <Type Name="SelectOneGameAnswer">
+      <Column Name="pkSelectGameAnswerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnswerText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AnswerHTML" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="fkSelectGameId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isCorrectAnswer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SelectOneGame_SelectOneGameAnswer" Member="SelectOneGame" ThisKey="fkSelectGameId" OtherKey="pkSelectOneGameID" Type="SelectOneGame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.SelectOneGame" Member="SelectOneGames">
+    <Type Name="SelectOneGame">
+      <Column Name="pkSelectOneGameID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnswerBackgroundImage" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="AnswerStyle" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="SelectOneGame_SelectOneGameAnswer" Member="SelectOneGameAnswers" ThisKey="pkSelectOneGameID" OtherKey="fkSelectGameId" Type="SelectOneGameAnswer" />
+      <Association Name="MagazineEdition_SelectOneGame" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.MatchingGameQuestion" Member="MatchingGameQuestions">
+    <Type Name="MatchingGameQuestion">
+      <Column Name="pkMatchGameQuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QuestionHTML" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkMatchGameId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestiosImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="MatchingGameQuestion_MatchingGameAnswer" Member="MatchingGameAnswers" ThisKey="pkMatchGameQuestionID" OtherKey="fkQuestionId" Type="MatchingGameAnswer" />
+      <Association Name="MatchingGame_MatchingGameQuestion" Member="MatchingGame" ThisKey="fkMatchGameId" OtherKey="pkMatchingGameID" Type="MatchingGame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.MatchingGameAnswer" Member="MatchingGameAnswers">
+    <Type Name="MatchingGameAnswer">
+      <Column Name="pkMatchGameAnswerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AnswerText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AnswerHTML" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkQuestionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkMatchGameId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnswerImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="MatchingGameQuestion_MatchingGameAnswer" Member="MatchingGameQuestion" ThisKey="fkQuestionId" OtherKey="pkMatchGameQuestionID" Type="MatchingGameQuestion" IsForeignKey="true" />
+      <Association Name="MatchingGame_MatchingGameAnswer" Member="MatchingGame" ThisKey="fkMatchGameId" OtherKey="pkMatchingGameID" Type="MatchingGame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.GroupToGameInter" Member="GroupToGameInters">
+    <Type Name="GroupToGameInter">
+      <Column Name="pkGameToGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkGameId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GameGroup_GroupToGameInter" Member="GameGroup" ThisKey="fkGroupId" OtherKey="pkGameGroupID" Type="GameGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.FindDifferenceGameAnswer" Member="FindDifferenceGameAnswers">
+    <Type Name="FindDifferenceGameAnswer">
+      <Column Name="pkDifferenceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fkGameId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FindDifferenceGame_FindDifferenceGameAnswer" Member="FindDifferenceGame" ThisKey="fkGameId" OtherKey="pkFindDifferenceGameID" Type="FindDifferenceGame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.GameGroup" Member="GameGroups">
+    <Type Name="GameGroup">
+      <Column Name="pkGameGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupHeader" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="GroupImage" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="fkGameTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkGameMenuTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemsPerRow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackgroungImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BackgroundColor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TitleStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DescStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="GameGroup_GroupToGameInter" Member="GroupToGameInters" ThisKey="pkGameGroupID" OtherKey="fkGroupId" Type="GroupToGameInter" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.MatchingGame" Member="MatchingGames">
+    <Type Name="MatchingGame">
+      <Column Name="pkMatchingGameID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionsBG" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="AnswersBG" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Direction" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionsHeader" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuestionsFooter" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuestionsStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AnswersHeader" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AnswersFooter" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AnswersStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuestionTblBG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AnswerTblBG" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuestionsLeft" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QuestionsRight" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QHStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QFStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AHStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AFStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QLStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QRStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ALStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ARStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AnswersLeft" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AnswersRight" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QContainerStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AContainerStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MainContainerStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="MatchingGame_MatchingGameQuestion" Member="MatchingGameQuestions" ThisKey="pkMatchingGameID" OtherKey="fkMatchGameId" Type="MatchingGameQuestion" />
+      <Association Name="MatchingGame_MatchingGameAnswer" Member="MatchingGameAnswers" ThisKey="pkMatchingGameID" OtherKey="fkMatchGameId" Type="MatchingGameAnswer" />
+    </Type>
+  </Table>
+  <Table Name="PtitDbUser2015.FindDifferenceGame" Member="FindDifferenceGames">
+    <Type Name="FindDifferenceGame">
+      <Column Name="pkFindDifferenceGameID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Picture1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Picture2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fkEditionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HTML1" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="HTML2" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="PictureAnswer" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="FindDifferenceGame_FindDifferenceGameAnswer" Member="FindDifferenceGameAnswers" ThisKey="pkFindDifferenceGameID" OtherKey="fkGameId" Type="FindDifferenceGameAnswer" />
+      <Association Name="MagazineEdition_FindDifferenceGame" Member="MagazineEdition" ThisKey="fkEditionId" OtherKey="pkEditionId" Type="MagazineEdition" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

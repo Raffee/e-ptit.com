@@ -1,0 +1,56 @@
+﻿@model IEnumerable<e_PTIT.Models.Riddle>
+
+@{
+    ViewBag.Title = "Riddles";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<h3 style="padding-top:10px;">Riddles</h3>
+<h4>
+    @Html.ActionLink("Create New", "NewRiddle")
+</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>  
+        <th>
+            @Html.DisplayNameFor(model => model.fkEditionId)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.PublishedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td> 
+        <td>
+            @Html.DisplayFor(modelItem => item.fkEditionId)
+        </td> 
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditRiddle", new { id=item.pkRiddleId })  
+        </td>
+    </tr>
+}
+
+</table>

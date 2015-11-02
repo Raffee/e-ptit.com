@@ -1,0 +1,381 @@
+﻿/*Amrenian Font */
+@font-face {
+    font-family: 'Arial AM';
+    src: url('../fonts/Arial AM.ttf') format('truetype');
+}
+
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+body {
+    font-family: 'Arial AM';
+    padding: 0px;
+    margin: 0px;
+    background-color: #f9f7f4;
+}
+
+.div, p, span, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial AM';
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.menuButton {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.masterHeadar {
+    height: 90px;
+    width: 100%;
+    background-image: url('../images/header_bg.png');
+    background-repeat: repeat-x;
+}
+
+.whiteBackground {
+    background-color: #ffffff;
+}
+
+.vCenterContainer {
+    position: relative;
+    height: 90px;
+}
+
+.vCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-FullWidth  {
+    max-width: 80% !important;
+}
+.input-Datepicker  {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Menu Style*/
+
+/*.custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(119, 119, 119, 1);
+}*/
+
+.custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 1);
+    border-width: 1px;
+    border-radius: 0px;
+}
+
+    .custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
+        color: rgba(119, 119, 119, 1);
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+        .custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
+        .custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
+            color: rgba(51, 51, 51, 1);
+            background-color: rgba(248, 248, 248, 0);
+        }
+
+    .custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+    .custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+    .custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
+        color: rgba(85, 85, 85, 1);
+        background-color: rgba(231, 231, 231, 1);
+    }
+
+    .custom-bootstrap-menu.navbar-default .navbar-toggle {
+        border-color: #ddd;
+    }
+
+        .custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+        .custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+            background-color: #ddd;
+        }
+
+        .custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+            background-color: #888;
+        }
+
+        .custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+        .custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+            background-color: #ffffff;
+        }
+
+.red {
+    border-top: 5px solid #f27b81;
+}
+
+.mustard {
+    border-top: 5px solid #f7c44e;
+}
+
+.green {
+    border-top: 5px solid #aec158;
+}
+
+.yellow {
+    border-top: 5px solid #fce480;
+}
+
+.blue {
+    border-top: 5px solid #4cbcd4;
+}
+
+.steelblue {
+    border-top: 5px solid #4c7297;
+}
+
+.purple {
+    border-top: 5px solid #dd72b3;
+}
+
+.lavender {
+    border-top: 5px solid #b0b6fb;
+}
+
+.pink {
+    border-top: 5px solid #fcc6e6;
+}
+
+.navbar-nav li.mustard a:hover,
+.navbar-nav li.mustard a:active {
+    color: #111;
+    background-color: #f7c44e;
+}
+
+.navbar-nav li.green a:hover,
+.navbar-nav li.green a:active {
+    color: #111;
+    background-color: #aec158;
+}
+
+.navbar-nav li.yellow a:hover,
+.navbar-nav li.yellow a:active {
+    color: #111;
+    background-color: #fce480;
+}
+
+.navbar-nav li.blue a:hover,
+.navbar-nav li.blue a:active {
+    color: #111;
+    background-color: #4cbcd4;
+}
+
+.navbar-nav li.steelblue a:hover,
+.navbar-nav li.steelblue a:active {
+    color: #111;
+    background-color: #4c7297;
+}
+
+.navbar-nav li.purple a:hover,
+.navbar-nav li.purple a:active {
+    color: #111;
+    background-color: #dd72b3;
+}
+
+.navbar-nav li.lavender a:hover,
+.navbar-nav li.lavender a:active {
+    color: #111;
+    background-color: #b0b6fb;
+}
+
+.navbar-nav li.pink a:hover,
+.navbar-nav li.pink a:active {
+    color: #111;
+    background-color: #fcc6e6;
+}
+/*End Menu Style*/
+/*--------------CUSTOMIZE THE CAROUSEL------------
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    height: 500px;
+    margin-bottom: 60px;
+    border-bottom: 4px solid rgba(119, 119, 119, 1);
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 500px;
+    background-color: #777;
+}
+
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+
+        .navbar-wrapper .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .navbar-wrapper .navbar {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        /* The navbar becomes detached from the top, so we round the corners */
+        .navbar-wrapper .navbar {
+            border-radius: 4px;
+        }
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}
+/***-*-*-*-*-* End Carousel-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-*/
+/*Panel Header Color*/
+
+.divMusterdPanelHeader {
+    background-color: #f7c44e !important;
+}
+
+.divMusterdPanelborder {
+    border-color: #f7c44e !important;
+}
+
+.divGreenPanelHeader {
+    background-color: #aec158 !important;
+}
+
+.divGreenPanelborder {
+    border-color: #aec158 !important;
+}
+
+.divLavenderPanelHeader {
+    background-color: #b0b6fb !important;
+}
+
+.divLavenderPanelborder {
+    border-color: #b0b6fb !important;
+}
+
+.divYellowPanelHeader {
+    background-color: #fce480 !important;
+}
+
+.divBluePanelHeader {
+    background-color: #4cbcd4 !important;
+}
+
+.divSteelBluePanelHeader {
+    background-color: #4c7297 !important;
+}
+
+.divPurplePanelHeader {
+    background-color: #dd72b3 !important;
+}
+
+.divPinkPanelHeader {
+    background-color: #fcc6e6 !important;
+}
+.divPanelborder {
+    border: 0px #FFFFFF solid !important;
+}
+/*End Panel Header Color*/
+.storyTellingSection {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url('../images/header/Website_1920HD.jpg');
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

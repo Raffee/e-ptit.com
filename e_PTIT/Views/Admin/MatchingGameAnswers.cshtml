@@ -1,0 +1,50 @@
+﻿@model IEnumerable<e_PTIT.Models.MatchingGameAnswer>
+
+@{
+    ViewBag.Title = "MatchingGameAnswers";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>MatchingGameAnswers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NewMatchingGameAnswer")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerHTML)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fkQuestionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fkMatchGameId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerHTML)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fkQuestionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fkMatchGameId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditMatchingGameAnswer", new { id = item.pkMatchGameAnswerID }) 
+        </td>
+    </tr>
+}
+
+</table>

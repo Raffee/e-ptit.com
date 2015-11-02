@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.75, 19.625" name="EPtitDataClasses">
+  <DataContextMoniker Name="/EPtitDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3079ea4d-8926-4f34-a388-3ca8fdbf8ad3" absoluteBounds="0.5, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Administrators" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0166827b-214b-4e42-a461-f9c2d35e115f" absoluteBounds="0.51499999999999968, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6daf81b2-3c81-467a-bf8d-33497622451e" absoluteBounds="3.125, 3.875, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Riddle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11be5889-6864-4254-b495-163a53ad9468" absoluteBounds="3.1400000000000006, 4.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a978f302-b3e6-40bd-99f8-0c92ef461c59" absoluteBounds="6, 4, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Answer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e8e6247-1d0b-42a0-ba15-0cd9b1c71d4c" absoluteBounds="6.0150000000000006, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 4.53125); (5.45833833333333 : 4.53125 : JumpStart); (5.22916666666667 : 4.53125 : JumpEnd); (5.125 : 4.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/Answer/Answer_Riddle" />
+      <nodes>
+        <classShapeMoniker Id="a978f302-b3e6-40bd-99f8-0c92ef461c59" />
+        <classShapeMoniker Id="6daf81b2-3c81-467a-bf8d-33497622451e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f63d30ea-b5de-4067-b1e6-f352ef3bb3fc" absoluteBounds="10, 2.625, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/StoryContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81915c71-244f-414c-b774-39107a6c3c35" absoluteBounds="10.015, 3.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac3baa34-8a20-4cd6-b022-22651a7a5184" absoluteBounds="6.5, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Story" />
+      <nestedChildShapes>
+        <elementListCompartment Id="260e1e03-6e84-4c11-a55b-822ade4707c9" absoluteBounds="6.515, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 3.10373787090182); (10 : 3.10373787090182)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/Story/Story_StoryContent" />
+      <nodes>
+        <classShapeMoniker Id="ac3baa34-8a20-4cd6-b022-22651a7a5184" />
+        <classShapeMoniker Id="f63d30ea-b5de-4067-b1e6-f352ef3bb3fc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2be62cce-dd0d-4d23-8ce2-7d4f73a1a74b" absoluteBounds="10, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/ContentTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1582695e-cd91-4c28-93a7-0074e8a53b31" absoluteBounds="10.015, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10 : 1.37713536376754); (8.5 : 1.37713536376754)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/ContentTemplate/ContentTemplate_Story" />
+      <nodes>
+        <classShapeMoniker Id="2be62cce-dd0d-4d23-8ce2-7d4f73a1a74b" />
+        <classShapeMoniker Id="ac3baa34-8a20-4cd6-b022-22651a7a5184" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a4638028-1ceb-49e2-b572-c4f1b23ae1ed" absoluteBounds="5.5, 6, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3630adc4-ba99-411f-9162-512d848f4341" absoluteBounds="5.5150000000000006, 6.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="998c20b4-12c7-414b-8c69-778068746c57" absoluteBounds="3.75, 0.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/MagazineEdition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72dfabfa-049a-4afe-ab62-d750559214db" absoluteBounds="3.7649999999999997, 1.085, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.4375 : 2.9485014479359); (4.4375 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_Riddle" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="6daf81b2-3c81-467a-bf8d-33497622451e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 1.78675072396795); (6.5 : 1.78675072396795)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_Story" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="ac3baa34-8a20-4cd6-b022-22651a7a5184" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6a5ace42-e03c-4342-942c-ffdbb3716ed4" absoluteBounds="12.75, 0.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Proverb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3f6f4f2-1367-4055-83c4-04800125bb79" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c0350cb-3733-4f08-bf79-6ddf7abf2061" absoluteBounds="15.5, 5.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/ProverbContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4314609e-f129-4bec-9d85-8d4f1dc5f088" absoluteBounds="15.515, 6.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed837b94-cedb-464a-a7f0-b2343c193f82" absoluteBounds="18.5, 5.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/HumorContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39f2db43-d3c1-4401-bb40-e6d56991b0b0" absoluteBounds="18.515, 6.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e60f780e-70ea-4b9a-8753-a1f175262187" absoluteBounds="15.75, 0.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/Humor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ff904a7-d55c-4dda-96c3-170113be2478" absoluteBounds="15.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12 : 1.50213536376754); (12.75 : 1.50213536376754)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/ContentTemplate/ContentTemplate_Proverb" />
+      <nodes>
+        <classShapeMoniker Id="2be62cce-dd0d-4d23-8ce2-7d4f73a1a74b" />
+        <classShapeMoniker Id="6a5ace42-e03c-4342-942c-ffdbb3716ed4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 2.9485014479359); (4.75 : 3.1985014479359); (5.22916666666667 : 3.1985014479359 : JumpStart); (5.45833833333333 : 3.1985014479359 : JumpEnd); (6.25 : 3.1985014479359); (6.25 : 3.83247574180365); (9.41666666666667 : 3.83247574180365 : JumpStart); (9.58333333333333 : 3.83247574180365 : JumpEnd); (9.75 : 3.83247574180365); (9.75 : 2.50427072753509); (12.375 : 2.50427072753509); (12.375 : 2.6985575527856); (12.75 : 2.6985575527856)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_Proverb" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="6a5ace42-e03c-4342-942c-ffdbb3716ed4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 3.83247574180365); (13.75 : 7.10149429743489); (15.5 : 7.10149429743489)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/Proverb/Proverb_ProverbContent" />
+      <nodes>
+        <classShapeMoniker Id="6a5ace42-e03c-4342-942c-ffdbb3716ed4" />
+        <classShapeMoniker Id="8c0350cb-3733-4f08-bf79-6ddf7abf2061" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.75 : 2.29123787090182); (19.5 : 2.29123787090182); (19.5 : 5.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/Humor/Humor_HumorContent" />
+      <nodes>
+        <classShapeMoniker Id="e60f780e-70ea-4b9a-8753-a1f175262187" />
+        <classShapeMoniker Id="ed837b94-cedb-464a-a7f0-b2343c193f82" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12 : 2.19084609353959); (12.5625 : 2.75334609353959); (12.5625 : 4.20747574180365); (13.6666666666667 : 4.20747574180365 : JumpStart); (13.8333333333333 : 4.20747574180365 : JumpEnd); (15.375 : 4.20747574180365); (15.75 : 3.83247574180365)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/ContentTemplate/ContentTemplate_Humor" />
+      <nodes>
+        <classShapeMoniker Id="2be62cce-dd0d-4d23-8ce2-7d4f73a1a74b" />
+        <classShapeMoniker Id="e60f780e-70ea-4b9a-8753-a1f175262187" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 1.78675072396795); (6.25 : 1.78675072396795); (6.25 : 3.70747574180365); (9.5 : 3.70747574180365); (9.5 : 5.76773216833671); (13.6666666666667 : 5.76773216833671 : JumpStart); (13.8333333333333 : 5.76773216833671 : JumpEnd); (15.25 : 5.76773216833671); (15.25 : 5.5); (16.781252 : 5.5); (16.781252 : 3.83247574180365)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_Humor" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="e60f780e-70ea-4b9a-8753-a1f175262187" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8a74d02e-dbcb-4111-a0f3-e2a0cd60c0e9" absoluteBounds="6.5, 16.5, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/WriteAnswerGame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80544a4b-ca52-4a5f-a1b7-bc9eda2826f9" absoluteBounds="6.515, 16.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a725cd70-8365-423d-a5c8-84003df1dccf" absoluteBounds="9.25, 10.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/SelectOneGameAnswer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f445d52-35aa-4f3c-b09e-42179ce65189" absoluteBounds="9.265, 10.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b268279c-9460-4872-bfe7-2f5e0230531d" absoluteBounds="6.5, 9.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/SelectOneGame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ccd5eac-bd9b-41fb-95c8-0e6f8488f9bb" absoluteBounds="6.515, 10.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34af9aec-5bf9-4a2a-8f7f-07def1ba74fb" absoluteBounds="15.125, 12.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/MatchingGameQuestion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41d186be-8bc4-4c20-b70f-d6bbb02538cb" absoluteBounds="15.14, 13.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eeafb4e4-0688-4bac-9ed1-330fb4e08473" absoluteBounds="17.875, 12.625, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/MatchingGameAnswer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e80d4684-b4f4-445b-ac69-bee07d33f624" absoluteBounds="17.89, 13.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0bd9f39-20f4-4fb5-8106-741d322b3bab" absoluteBounds="18.125, 16.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/GroupToGameInter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd767ebe-b5c7-417d-87df-b46e4c8f03f5" absoluteBounds="18.14, 17.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e1f5bed-e368-4d14-b582-d6aa75bf94b3" absoluteBounds="9.25, 13.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/FindDifferenceGameAnswer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="448a38ed-75b8-46e7-9744-d51aeb12110c" absoluteBounds="9.265, 14.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.3125 : 2.97280110677083); (5.3125 : 17.9623527018229); (6.5 : 17.9623527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_WriteAnswerGame" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="8a74d02e-dbcb-4111-a0f3-e2a0cd60c0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 11.0104484049479); (9.25 : 11.0104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/SelectOneGame/SelectOneGame_SelectOneGameAnswer" />
+      <nodes>
+        <classShapeMoniker Id="b268279c-9460-4872-bfe7-2f5e0230531d" />
+        <classShapeMoniker Id="a725cd70-8365-423d-a5c8-84003df1dccf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.3437525 : 2.97280110677083); (5.3437525 : 11.0489005533854); (6.5 : 11.0489005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_SelectOneGame" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="b268279c-9460-4872-bfe7-2f5e0230531d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.125 : 13.5104484049479); (17.875 : 13.5104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MatchingGameQuestion/MatchingGameQuestion_MatchingGameAnswer" />
+      <nodes>
+        <classShapeMoniker Id="34af9aec-5bf9-4a2a-8f7f-07def1ba74fb" />
+        <classShapeMoniker Id="eeafb4e4-0688-4bac-9ed1-330fb4e08473" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4e96cf6d-7a8f-4660-a013-406277ba5fa3" absoluteBounds="15.625, 16.25, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/GameGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1e35976-1779-4032-8f5c-4c97439b2f2a" absoluteBounds="15.64, 16.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.625 : 17.3181469726563); (18.125 : 17.3181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/GameGroup/GameGroup_GroupToGameInter" />
+      <nodes>
+        <classShapeMoniker Id="4e96cf6d-7a8f-4660-a013-406277ba5fa3" />
+        <classShapeMoniker Id="f0bd9f39-20f4-4fb5-8106-741d322b3bab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="23e82c35-0b03-4c48-89bb-9e8bdce267f9" absoluteBounds="12.5, 9.875, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/MatchingGame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd81be94-654e-4c86-80ed-dce4ad92e28f" absoluteBounds="12.515, 10.335, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5 : 13.5104484049479); (15.125 : 13.5104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MatchingGame/MatchingGame_MatchingGameQuestion" />
+      <nodes>
+        <classShapeMoniker Id="23e82c35-0b03-4c48-89bb-9e8bdce267f9" />
+        <classShapeMoniker Id="34af9aec-5bf9-4a2a-8f7f-07def1ba74fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 14.5232975260417); (17.875 : 14.5232975260417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MatchingGame/MatchingGame_MatchingGameAnswer" />
+      <nodes>
+        <classShapeMoniker Id="23e82c35-0b03-4c48-89bb-9e8bdce267f9" />
+        <classShapeMoniker Id="eeafb4e4-0688-4bac-9ed1-330fb4e08473" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aecb7642-640e-4e3f-89d7-1b10565f0b1c" absoluteBounds="6.125, 13.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EPtitDataClassesDataContext/FindDifferenceGame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="188d53a3-5d58-4b1b-af0c-10a27301d705" absoluteBounds="6.14, 13.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 14.4142976888021); (9.25 : 14.4142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/FindDifferenceGame/FindDifferenceGame_FindDifferenceGameAnswer" />
+      <nodes>
+        <classShapeMoniker Id="aecb7642-640e-4e3f-89d7-1b10565f0b1c" />
+        <classShapeMoniker Id="0e1f5bed-e368-4d14-b582-d6aa75bf94b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375005 : 2.97280110677083); (5.375005 : 14.5873527018229); (6.125 : 14.5873527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EPtitDataClassesDataContext/MagazineEdition/MagazineEdition_FindDifferenceGame" />
+      <nodes>
+        <classShapeMoniker Id="998c20b4-12c7-414b-8c69-778068746c57" />
+        <classShapeMoniker Id="aecb7642-640e-4e3f-89d7-1b10565f0b1c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

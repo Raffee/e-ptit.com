@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+</head>
+
+
+<body>
+
+
+    <button id="opener">open the dialog</button>
+    <div id="dialog1" title="Dialog Title" hidden="hidden">I'm a dialog</div>
+<script>
+    $(function () {
+    $( "#dialog1" ).dialog({
+    autoOpen: false
+    });
+
+    $("#opener").click(function() {
+    $("#dialog1").dialog('open');
+    });
+    });
+    </script>
+</body>
+</html>

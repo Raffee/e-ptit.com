@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "ԱՌՈՂՋԱՊԱՀԱԿԱՆ";
+    Layout = "~/Views/Shared/_ArticlesLayoutPagPP.cshtml";
+}
+<div class="container" style="background-color:#f9f7f4;color:#f75e74;border-left:1px solid #808080;border-right:1px solid #808080;">
+    <div style="margin-top:10px !important;width:100%;" class="text-center">
+        <div class="text-center">
+            <img src="~/images/healthHeader.jpg" />
+        </div>
+    </div>
+    <br />
+    <br />
+    <script>
+    function toggleTargetControl(targetName) {
+        $("." + targetName).toggle();
+    }
+
+    </script>
+    <div class="row" style="background-color:#fadb60;">
+        <div class="col-md-2"><button onclick="toggleTargetControl('answer3');" id="getAnswer" class="btn btn-danger" style="border:0px;">* Բառարան </button></div>
+        <div class="col-md-8 answer3 text-left" id="answer3" style="display:none;">
+            <ul class="list-group" style="font-weight:500;background-color:#f9f7f4;">
+                <li class="list-group-item">ԸՄՊԵԼԻՔ - խմելիք</li>
+                <li class="list-group-item">Ի ԴԵՐԵՒ - ի զուր, պարապ տեղ</li>
+                <li class="list-group-item">ԽՈՒՍԱՓԻԼ- խոյս տալ, զգուշանալ</li>
+                <li class="list-group-item">ԿԻԶԻՉ - այրող</li>
+                <li class="list-group-item">ԿՈՒՇՏՈՒԿՈՒՌ - լման կշտացած</li>
+                <li class="list-group-item">ՀԵՇՏ - դիւրին</li>
+                <li class="list-group-item">ՀՆԱՐԱՄԻՏ - հնարող խելք ունեցող</li>
+                <li class="list-group-item">ՍԱՏԱՐԵԼ- օգնել, օժանդակել</li>
+                <li class="list-group-item">ՍՆՆԴԱՌՈՒԹԻՒՆ - սնունդ առնելը</li>
+                <li class="list-group-item">ՓԱՓԿԱՆԿԱՏ - նրբանկատ, նուրբ վարմունք ունեցող</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style="background-color:#fadb60;">
+            <img src="~/Media/Health/health001.jpg" />
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Առակներ";
+    Layout = "~/Views/Shared/_ProverbLayoutPagePP.cshtml";
+}
+<div class="container" style="background-color:#f9f7f4;color:#000;border-left:1px solid #808080;border-right:1px solid #808080;">
+    <div style="margin-top:10px !important;width:100%;" class="text-center">
+        <div class="text-center">
+
+            <img src="~/images/proverbsHeader.png" />
+        </div>
+        <div class="text-center">
+            <img src="~/images/ProverbsTitle.png" />
+        </div>
+    </div>
+    <br />
+    <br />
+    <script>
+    function toggleTargetControl(targetName) {
+        $("." + targetName).toggle();
+    }
+
+    </script>
+    <div class="row">
+        <div class="col-md-2"><button onclick="toggleTargetControl('answer3');" id="getAnswer" class="btn btn-danger" style="border:0px;">* Բառարան </button></div>
+        <div class="col-md-8 answer3 text-left" id="answer3" style="display:none;">
+            <ul class="list-group" style="font-weight:500;">
+                <li class="list-group-item">ԸՄՊԵԼԻՔ - խմելիք</li>
+                <li class="list-group-item">Ի ԴԵՐԵՒ - ի զուր, պարապ տեղ</li>
+                <li class="list-group-item">ԽՈՒՍԱՓԻԼ- խոյս տալ, զգուշանալ</li>
+                <li class="list-group-item">ԿԻԶԻՉ - այրող</li>
+                <li class="list-group-item">ԿՈՒՇՏՈՒԿՈՒՌ - լման կշտացած</li>
+                <li class="list-group-item">ՀԵՇՏ - դիւրին</li>
+                <li class="list-group-item">ՀՆԱՐԱՄԻՏ - հնարող խելք ունեցող</li>
+                <li class="list-group-item">ՍԱՏԱՐԵԼ- օգնել, օժանդակել</li>
+                <li class="list-group-item">ՍՆՆԴԱՌՈՒԹԻՒՆ - սնունդ առնելը</li>
+                <li class="list-group-item">ՓԱՓԿԱՆԿԱՏ - նրբանկատ, նուրբ վարմունք ունեցող</li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="media-list">
+                <li><br /></li>
+                <li class="media">
+                    <div class="pull-left">
+                        <a href="/Proverbs/ProverbOne">
+                            <img class="media-object" src="~/Media/Proverbs/1/1.jpg" alt="..." style="width:200px !important;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Այծեր Եւ Գայլեր</h3>
+                        <h4> Այծերը հաւաքուեցան եւ գայլերուն պատգամ ուղարկեցին ու ըսին. "Ինչո՞ւ մեր մէջ խռովութիւն ըլլայ եւ ոչ՝</h4><br /><br /><br /><br />
+                        <div class="text-right"> <a href="/Proverbs/ProverbOne" class="btn btn-info" role="button" style="background-color:#f75e74;border:0px !important;">կարդալ ամբողջութեամբ...</a></div>
+                        <br />
+                    </div>
+                </li>
+                <li><hr /></li>
+                <li class="media">
+                    <div class="pull-left">
+                        <a href="/Proverbs/ProverbThree">
+                            <img class="media-object" src="~/Media/Proverbs/3/1.jpg" alt="..." style="width:200px !important;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Առիւծն Ու Աղուէսը</h3>
+                        <h4>Առիւծ մը կորիւնի մը ծնունդ տուաւ։ Կենդանիները հաւաքուեցան կորիւնը տեսնելու եւ ուրախանալու։</h4>
+                        <br /><br /><br /><br />
+                        <div class="text-right"> <a href="/Proverbs/ProverbThree" class="btn btn-info" role="button" style="background-color:#f75e74;border:0px !important;">կարդալ ամբողջութեամբ...</a></div>
+                        <br />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <br />
+</div>

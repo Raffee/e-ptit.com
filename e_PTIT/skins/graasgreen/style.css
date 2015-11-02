@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header.type1 #main-menu ul li.current_page_item, #header.type1 #main-menu ul li ul.drop-down li a, a.dt-sc-toggle:before, p.dt-sc-toggle-accordion.active:before, .dt-sc-sorting-container a:hover, 
+.dt-sc-button, .month a.dt-sc-button:hover, .timeline .blog-post:hover .entry-meta, .timeline .blog-post:hover .post-detail, .dt-sc-tb-header .price, .dt-sc-pr-tb-col .dt-sc-buy-now .button, .dt-sc-pr-tb-col:hover, 
+.dt-sc-ico-content li:hover i, #contact-form p.submit input[type="submit"], .dt-sc-toggle-frame:hover p.dt-sc-toggle-accordion:before, #mailchimp-form p.submit input[type="submit"], .dt-sc-pr-tb-col.selected , input[type=submit], 
+button, input[type=button], .post-pagination a , .blog-single-entry .entry-meta , .bx-controls .bx-prev, .bx-controls .bx-next, .mean-container .mean-nav ul li a, #magic-line-two , #tiptip_content , 
+.mean-container a.meanmenu-reveal span , .page-title , .dt-sc-sorting-container a.active-sort , .widget_tag_cloud a:hover , .intro-text a.dt-sc-button.grey:hover , .fullwidthbanner-container a.dt-sc-button:hover, 
+.ls-l.slider-button , #header.type3 #main-menu ul li.current_page_item , #header.type3 #main-menu ul li a:hover , #toggle-panel a { color: #fff; background:#81c77f; }
+
+#header #main-menu ul li ul.drop-down a:hover , #header.type2 #main-menu ul a:hover , #header.type2 #main-menu ul li.current_page_item a , #header #main-menu ul li ul.drop-down li a:hover , h2 span, .dt-sc-ico-content.type2 .fa, 
+.parallax h3 span, .parallax .dt-sc-services .fa, p.dt-sc-toggle-accordion.active a , .dt-sc-social-icons li a:hover, .dt-sc-testimonial .author-detail cite, .dt-sc-toggle-frame p.dt-sc-toggle-accordion a:hover, 
+.dt-sc-ico-content li:hover, .specials a.read-more, .dt-sc-contact-info a:hover, .latest-tweets p.medium:before, .latest-tweets a:hover, p.copyright-info a:hover, .dt-sc-ico-content.type1:hover .fa, .dt-sc-ico-content.type1:hover h3 a, 
+.dt-sc-team:hover h3 a, .dt-sc-team:hover .dt-sc-social-icons ul li a, .comment .reply a, .comment-details .author-name a , #secondary .widget ul li a , #secondary .widget ul.tweet_list li a:hover , 
+#secondary .widget.widget_recent_entries ul li .entry-meta a:hover , #secondary .widget ul.tweet_list li , .blog-single-entry .entry-title h4 a , .blog-single-entry .entry-details .entry-metadata a:hover , 
+.widget_archive ul li a:before , .widget_categories ul li a:before , .project-details h5  , .project-details span  , .project-details p a, .mean-container .mean-nav ul li a:hover , .latest-tweets .tweet_text:before , 
+.latest-tweets span.tweet_time a, p.ls-l.skin-color , .round-list .skin-color , #header .contact-details p a:hover , #toggle-panel a:hover , #main-menu > ul > li:hover > a, #main-menu > ul > li.current_page_item > a, 
+#main-menu > ul > li.current-menu-item > a, #main-menu ul li ul li a:hover, #main-menu li ul li:hover a , .carousel-arrows a:hover , .mean-container .mean-nav ul li a:hover { color:#81c77f; }
+
+.dt-sc-ico-content.type1:hover .fa:after , .icon-list-square i:after { border-color: rgba(165, 201, 163, 1) rgba(165, 201, 163, 1) #81c77f #81c77f; }
+.dt-sc-ico-content.type1:hover p:before , .dt-sc-team:hover p:before { border-top: 7px solid #81c77f; }
+.dt-sc-ico-content.type1:hover h3:after , .dt-sc-team:hover h3:after { border-bottom: 1px solid #81c77f; border-right: 1px solid #81c77f;}
+.dt-sc-ico-content.type1:hover p { border-color:#81c77f; }
+
+#header #main-menu ul.drop-down:before { border-bottom:7px solid #19a9e5; }
+
+.dt-sc-pr-tb-col  .dt-sc-buy-now .button:hover, .dt-sc-pr-tb-col:hover .dt-sc-buy-now .button, .dt-sc-pr-tb-col:hover .dt-sc-tb-header .price, .dt-sc-pr-tb-col.selected .dt-sc-buy-now .button , 
+.dt-sc-pr-tb-col.selected .dt-sc-tb-header .price ,  .post-pagination a:hover , .widget_tag_cloud a , .bx-controls .bx-prev:hover, .bx-controls .bx-next:hover , #search-form p.submit input:hover , 
+ul.tabs-frame li a.current { background: #fff; color:#81c77f; }
+
+.right .post-detail:hover span , .left .post-detail:hover span, .timeline .blog-post:hover .post-detail span , .portfolio-slider , .portfolio .fig-overlay a:hover, .portfolio figcaption h5 a:hover , #header #main-menu ul.drop-down, 
+#header #main-menu ul li.current_page_item ul.drop-down a , #main-menu ul li ul.drop-down:hover #main-menu ul li a , #header.type1 #main-menu ul a:hover { background:#81c77f; }
+
+.dt-sc-tb-header .price , timeline .blog-post:hover .entry-meta, .portfolio figcaption h5 a:hover , ul.commentlist li .comment-author img , .portfolio .fig-overlay a:hover, .portfolio figcaption h5 a:hover , .widget_tag_cloud a:hover , 
+#header #main-menu ul.drop-down { border: 1px solid #81c77f; }
+
+.dt-sc-team:hover p { border-top: 1px solid #81c77f;}
+
+article:hover .entry-meta .date p , ul.tabs-frame li a.current{ border-bottom-color: #a5f8a0; }
+
+.dt-sc-ico-content.type1:hover .fa , .post-pagination a:hover , .mean-container .mean-nav ul li a:hover , .tip_bottom #tiptip_content  , #search-form p.submit input:hover ,  .icon-list-square i , 
+#toggle-panel a:hover { box-shadow: 0 0 0 1px rgba(129, 199, 127, 1) inset; -webkit-box-shadow: 0 0 0 1px rgba(129, 199, 127, 1) inset; -moz-box-shadow:0 0 0 1px rgba(129, 199, 127, 1) inset; }
+
+#contact-form p.submit input, #mailchimp-form p.submit input , #comment-form p.submit input , .dt-sc-buy-now .button , .intro-text a.dt-sc-button , .intro-text a.dt-sc-button.grey:hover , .tabs-frame-content  
+.dt-sc-button { border-bottom:2px solid #8fcd8c; }
+
+ul.tabs-frame li a.current { -webkit-box-shadow: inset 0px -3px 0px 0px rgba(129, 199, 127, 1); -moz-box-shadow: inset 0px -3px 0px 0px rgba(129, 199, 127, 1); box-shadow: inset 0px -3px 0px 0px rgba(129, 199, 127, 1); }
+
+#tiptip_holder.tip_top #tiptip_arrow { border-top-color:#fff; border-top-color:#81c77f;  }		
+#tiptip_holder.tip_bottom #tiptip_arrow { border-bottom-color:#fff; border-bottom-color:#81c77f; }		
+#tiptip_holder.tip_right #tiptip_arrow { border-right-color:#fff; border-right-color:#81c77f; }		 
+#tiptip_holder.tip_left #tiptip_arrow { border-left-color:#fff; border-left-color:#81c77f; }
+
+.dt-sc-pr-tb-col:hover p.medium, .dt-sc-pr-tb-col.selected p.medium { border-bottom: 1px dotted #a5f8a0; border-top: 1px dotted #a5f8a0; }

@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteBasic.Master.cs" Inherits="e_PTIT.Common.SiteBasic" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+    <div>
+
+    <div class="container" style="background-color: #f9f7f4; color: #a1e254; border-left: 1px solid #808080; border-right: 1px solid #808080; min-height:650px;">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="col-md-2">
+            </div>
+        </div>
+    </form>
+    <div class="container-fluid" style="padding: 0px !important;">
+        <div class="footer">
+            <div class="text-center">
+                <img src="../images/footer/newFooter.jpg" />
+            </div>
+            <div class="row" style="padding: 3px; color: #596982;">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">Copyright &copy 2015 PTIT. All rights reserved.</div>
+                <div class="col-md-3" style="text-align: right;"><a href="../Pages/ContactUs.aspx">Contact Us</a></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+
+</body>
+</html>
